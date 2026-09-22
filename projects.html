@@ -1,1 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <title>Projects — Angelina Ghimire</title>
+  <meta
+    name="description"
+    content="Projects by Angelina Ghimire."
+  >
+
+  <link rel="icon" href="data:,">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Public+Sans:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+    :root {
+      --paper: #faf9f5;
+      --ink: #1c1f1d;
+      --ink-soft: #4b4f4a;
+      --accent: #2f5d50;
+      --line: #dedad0;
+      --muted: #8f8b7f;
+      --placeholder: #efece3;
+      --max-width: 640px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: "Public Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+      font-size: 17px;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .wrap {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 3.5rem 1.5rem 4rem;
+    }
+
+    /* Navigation */
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      margin-bottom: 3rem;
+    }
+
+    nav a {
+      color: var(--ink-soft);
+      text-decoration: none;
+      font-size: 0.95rem;
+      letter-spacing: 0.01em;
+      padding-bottom: 3px;
+      border-bottom: 1px solid transparent;
+      transition:
+        color 0.15s ease,
+        border-color 0.15s ease;
+    }
+
+    nav a:hover {
+      color: var(--ink);
+      border-color: var(--line);
+    }
+
+    nav a[aria-current="page"] {
+      color: var(--ink);
+      border-color: var(--accent);
+    }
+
+    /* Typography */
+
+    h1,
+    h2,
+    h3 {
+      font-family: "Fraunces", Georgia, serif;
+    }
+
+    h1 {
+      margin: 0 0 0.6rem;
+      font-size: 2.5rem;
+      line-height: 1.15;
+      font-weight: 500;
+      letter-spacing: -0.01em;
+    }
+
+    .intro {
+      margin-bottom: 3rem;
+      color: var(--ink-soft);
+    }
+
+    p {
+      max-width: 60ch;
+      margin: 0 0 1.25rem;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration-color: rgba(47, 93, 80, 0.35);
+      text-underline-offset: 2px;
+    }
+
+    a:hover {
+      text-decoration-color: var(--accent);
+    }
+
+    /* Projects */
+
+    .projects {
+      margin-top: 2.5rem;
+    }
+
+    .project {
+      padding: 2rem 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .project:first-child {
+      border-top: none;
+      padding-top: 0;
+    }
+
+    .project-image {
+      margin: 0 0 1.5rem;
+    }
+
+    .project-image img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      background: var(--placeholder);
+      border: 1px solid var(--line);
+      border-radius: 3px;
+    }
+
+    .project h2 {
+      margin: 0 0 0.25rem;
+      font-size: 1.65rem;
+      line-height: 1.25;
+      font-weight: 500;
+    }
+
+    .project-subtitle {
+      margin: 0 0 0.8rem;
+      color: var(--ink-soft);
+      font-size: 0.9rem;
+    }
+
+    .project p {
+      font-size: 0.97rem;
+    }
+
+    .tech {
+      margin: 1rem 0 1.25rem;
+      color: var(--muted);
+      font-size: 0.82rem;
+      letter-spacing: 0.01em;
+    }
+
+    .project-link {
+      font-size: 0.92rem;
+    }
+
+    /* Footer */
+
+    footer {
+      margin-top: 3rem;
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+
+    /* Responsive */
+
+    @media (max-width: 480px) {
+      .wrap {
+        padding-top: 2.5rem;
+      }
+
+      h1 {
+        font-size: 2.1rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="wrap">
+
+    <nav aria-label="Main navigation">
+      <a href="index.html">about</a>
+      <a href="projects.html" aria-current="page">projects</a>
+      <a href="#" title="Coming soon">research &amp; writing</a>
+      <a href="#" title="Coming soon">personal</a>
+    </nav>
+
+    <header>
+      <h1>Projects</h1>
+
+      <p class="intro">
+        A few things I've built, experimented with, and learned from along
+        the way.
+      </p>
+    </header>
+
+    <section class="projects" aria-label="Projects">
+
+      <!-- Abhilekh -->
+
+      <article class="project">
+
+        <figure class="project-image">
+          <img
+            src="images/abhilekh.png"
+            alt="Abhilekh project"
+          >
+        </figure>
+
+        <h2>Abhilekh</h2>
+
+        <p class="project-subtitle">
+          Digitizing Nepali stone inscriptions
+        </p>
+
+        <p>
+          What happens when you point a phone at a centuries-old stone
+          inscription? I worked on a project to make Nepali stone inscriptions
+          easier to digitize and preserve using image processing and OCR.
+        </p>
+
+        <p>
+          We experimented with thresholding techniques including Otsu,
+          Niblack, and Sauvola before passing the images through Tesseract OCR.
+          I also built a mobile and Django backend pipeline so inscriptions
+          could be captured, processed, and uploaded from a phone.
+        </p>
+
+        <p class="tech">
+          image processing · OCR · Tesseract · Django · Flutter · Python
+        </p>
+
+        <!-- Add a project link here if you have one -->
+        <!--
+        <p class="project-link">
+          <a href="YOUR-GITHUB-LINK" target="_blank" rel="noopener noreferrer">
+            view the project →
+          </a>
+        </p>
+        -->
+
+      </article>
+
+
+      <!-- Laali -->
+
+      <article class="project">
+
+        <figure class="project-image">
+          <img
+            src="images/laali.png"
+            alt="Laali period prediction project"
+          >
+        </figure>
+
+        <h2>Laali</h2>
+
+        <p class="project-subtitle">
+          Personalized period prediction using LSTMs
+        </p>
+
+        <p>
+          I started wondering whether period prediction systems actually knew
+          much about women like us. So we collected menstrual cycle data from
+          150 Nepali women and looked at whether population-specific data could
+          make prediction models more useful.
+        </p>
+
+        <p>
+          I modeled cycle patterns, generated synthetic time-series data, and
+          trained LSTM models for prediction. The project also became a way to
+          think about a larger problem I keep coming back to: what happens
+          when a model trained on one population is quietly assumed to work
+          everywhere?
+        </p>
+
+        <p class="tech">
+          PyTorch · LSTMs · time series · data analysis · Python
+        </p>
+
+        <!-- Add a project link here if you have one -->
+        <!--
+        <p class="project-link">
+          <a href="YOUR-GITHUB-LINK" target="_blank" rel="noopener noreferrer">
+            view the project →
+          </a>
+        </p>
+        -->
+
+      </article>
+
+
+      <!-- Grant Generator -->
+
+      <article class="project">
+
+        <figure class="project-image">
+          <img
+            src="images/grant-generator.png"
+            alt="Grant document generator project"
+          >
+        </figure>
+
+        <h2>Grant Document Generator</h2>
+
+        <p class="project-subtitle">
+          RAG for finding and writing grant information
+        </p>
+
+        <p>
+          We built a RAG-based tool to make the painfully tedious process of
+          searching through grant documents a little easier. The system
+          retrieved relevant information from grant materials and used it to
+          help generate application documents.
+        </p>
+
+        <p class="tech">
+          RAG · LLMs · Python · information retrieval
+        </p>
+
+      </article>
+
+
+      <!-- Add another project here -->
+
+      <!--
+      <article class="project">
+
+        <figure class="project-image">
+          <img
+            src="images/project-name.png"
+            alt="Description of the project"
+          >
+        </figure>
+
+        <h2>Project Name</h2>
+
+        <p class="project-subtitle">
+          Short description
+        </p>
+
+        <p>
+          Tell the story of the project here. What were you trying to do?
+          Why did you care about it? What did you build?
+        </p>
+
+        <p class="tech">
+          Python · PyTorch · etc.
+        </p>
+
+        <p class="project-link">
+          <a href="YOUR-GITHUB-LINK" target="_blank" rel="noopener noreferrer">
+            view the project →
+          </a>
+        </p>
+
+      </article>
+      -->
+
+    </section>
+
+    <footer>
+      &copy; 2026 Angelina Ghimire · Hosted on GitHub Pages
+    </footer>
+
+  </main>
+</body>
+</html>
