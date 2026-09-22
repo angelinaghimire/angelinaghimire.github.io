@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Projects — Angelina Ghimire</title>
+
   <meta
     name="description"
     content="Projects by Angelina Ghimire."
@@ -103,14 +104,21 @@
       letter-spacing: -0.01em;
     }
 
-    .intro {
-      margin-bottom: 3rem;
-      color: var(--ink-soft);
+    h2 {
+      margin: 0 0 0.25rem;
+      font-size: 1.65rem;
+      line-height: 1.25;
+      font-weight: 500;
     }
 
     p {
       max-width: 60ch;
       margin: 0 0 1.25rem;
+    }
+
+    .intro {
+      margin-bottom: 3rem;
+      color: var(--ink-soft);
     }
 
     a {
@@ -121,6 +129,15 @@
 
     a:hover {
       text-decoration-color: var(--accent);
+    }
+
+    /* Section headings */
+
+    .section-heading {
+      margin: 4rem 0 0;
+      padding-top: 2rem;
+      border-top: 1px solid var(--line);
+      font-size: 1.8rem;
     }
 
     /* Projects */
@@ -139,26 +156,25 @@
       padding-top: 0;
     }
 
-    .project-image {
+    /* Project images */
+
+    .project-images {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
       margin: 0 0 1.5rem;
     }
 
-    .project-image img {
+    .project-images img {
       display: block;
       width: 100%;
-      aspect-ratio: 16 / 9;
-      object-fit: cover;
+      height: auto;
       background: var(--placeholder);
       border: 1px solid var(--line);
       border-radius: 3px;
     }
 
-    .project h2 {
-      margin: 0 0 0.25rem;
-      font-size: 1.65rem;
-      line-height: 1.25;
-      font-weight: 500;
-    }
+    /* Project text */
 
     .project-subtitle {
       margin: 0 0 0.8rem;
@@ -173,12 +189,12 @@
     .tech {
       margin: 1rem 0 1.25rem;
       color: var(--muted);
-      font-size: 0.82rem;
+      font-size: 0.82rem !important;
       letter-spacing: 0.01em;
     }
 
     .project-link {
-      font-size: 0.92rem;
+      font-size: 0.92rem !important;
     }
 
     /* Footer */
@@ -199,155 +215,108 @@
       h1 {
         font-size: 2.1rem;
       }
+
+      .section-heading {
+        font-size: 1.6rem;
+      }
     }
   </style>
 </head>
 
 <body>
+
   <main class="wrap">
+
+    <!-- Navigation -->
 
     <nav aria-label="Main navigation">
       <a href="index.html">about</a>
-      <a href="projects.html" aria-current="page">projects</a>
-      <a href="#" title="Coming soon">research &amp; writing</a>
-      <a href="#" title="Coming soon">personal</a>
+
+      <a href="projects.html" aria-current="page">
+        projects
+      </a>
+
+      <a href="#" title="Coming soon">
+        research &amp; writing
+      </a>
+
+      <a href="#" title="Coming soon">
+        personal
+      </a>
     </nav>
 
+
+    <!-- Page intro -->
+
     <header>
+      <h1>Featured</h1>
 
       <p class="intro">
         A few things I've built, experimented with, and learned from along the way.
       </p>
     </header>
-    
 
-    <section class="projects" aria-label="Projects">
+
+    <!-- Featured projects -->
+
+    <section class="projects" aria-label="Featured projects">
 
       <!-- Chhaano -->
-  <article class="project">
-
-  <div class="project-images">
-    <img src="images/ch1.png" alt="Chhaano search filters">
-    <img src="images/ch2.png" alt="Chhaano rental listings">
-  </div>
-
-  <h2>Chhaano</h2>
-
-  <p class="project-subtitle">
-    An online room-rental marketplace for Kathmandu University students
-  </p>
-
-  <p>
-    A rental marketplace where students can discover rental listings, filter
-    them by price, location, property type, and amenities, view properties on
-    an interactive map, and contact landlords.
-  </p>
-
-  <p class="tech">
-    React · Django · PostgreSQL · Python · JWT
-  </p>
-
-  <p class="project-link">
-    <a href="https://github.com/angelinaghimire/chaano/tree/main/KURental"
-       target="_blank"
-       rel="noopener noreferrer">
-      view the project →
-    </a>
-  </p>
-
-</article>
-
-
-      <!-- Laali -->
 
       <article class="project">
 
-        <figure class="project-image">
+        <div class="project-images">
           <img
-            src="images/laali.png"
-            alt="Laali period prediction project"
+            src="images/ch1.png"
+            alt="Chhaano search filters"
           >
-        </figure>
 
-        <h2>Laali</h2>
+          <img
+            src="images/ch2.png"
+            alt="Chhaano rental listings"
+          >
+        </div>
+
+        <h2>Chhaano</h2>
 
         <p class="project-subtitle">
-          Personalized period prediction using LSTMs
+          An online room-rental marketplace for Kathmandu University students
         </p>
 
         <p>
-          I started wondering whether period prediction systems actually knew
-          much about women like us. So we collected menstrual cycle data from
-          150 Nepali women and looked at whether population-specific data could
-          make prediction models more useful.
-        </p>
-
-        <p>
-          I modeled cycle patterns, generated synthetic time-series data, and
-          trained LSTM models for prediction. The project also became a way to
-          think about a larger problem I keep coming back to: what happens
-          when a model trained on one population is quietly assumed to work
-          everywhere?
+          A rental marketplace where students can discover rental listings,
+          filter them by price, location, property type, and amenities,
+          view properties on an interactive map, and contact landlords.
         </p>
 
         <p class="tech">
-          PyTorch · LSTMs · time series · data analysis · Python
+          React · Django · PostgreSQL · Python · JWT
         </p>
 
-        <!-- Add a project link here if you have one -->
-        <!--
         <p class="project-link">
-          <a href="YOUR-GITHUB-LINK" target="_blank" rel="noopener noreferrer">
+          <a
+            href="https://github.com/angelinaghimire/chaano/tree/main/KURental"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             view the project →
           </a>
         </p>
-        -->
 
       </article>
 
 
-      <!-- Grant Generator -->
+      <!-- Little Things -->
 
-      <article class="project">
-
-        <figure class="project-image">
-          <img
-            src="images/grant-generator.png"
-            alt="Grant document generator project"
-          >
-        </figure>
-
-        <h2>Grant Document Generator</h2>
-
-        <p class="project-subtitle">
-          RAG for finding and writing grant information
-        </p>
-
-        <p>
-          We built a RAG-based tool to make the painfully tedious process of
-          searching through grant documents a little easier. The system
-          retrieved relevant information from grant materials and used it to
-          help generate application documents.
-        </p>
-
-        <p class="tech">
-          RAG · LLMs · Python · information retrieval
-        </p>
-
-      </article>
+      <h2 class="section-heading">
+        Little Things
+      </h2>
 
 
-      <!-- Add another project here -->
+      <!-- Add smaller projects here -->
 
       <!--
       <article class="project">
-
-        <figure class="project-image">
-          <img
-            src="images/project-name.png"
-            alt="Description of the project"
-          >
-        </figure>
 
         <h2>Project Name</h2>
 
@@ -356,16 +325,19 @@
         </p>
 
         <p>
-          Tell the story of the project here. What were you trying to do?
-          Why did you care about it? What did you build?
+          Tell the story of the project here.
         </p>
 
         <p class="tech">
-          Python · PyTorch · etc.
+          Python · C · etc.
         </p>
 
         <p class="project-link">
-          <a href="YOUR-GITHUB-LINK" target="_blank" rel="noopener noreferrer">
+          <a
+            href="YOUR-LINK"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             view the project →
           </a>
         </p>
@@ -375,10 +347,14 @@
 
     </section>
 
+
+    <!-- Footer -->
+
     <footer>
       &copy; 2026 Angelina Ghimire · Hosted on GitHub Pages
     </footer>
 
   </main>
+
 </body>
 </html>
