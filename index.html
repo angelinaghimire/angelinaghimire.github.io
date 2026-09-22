@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Angelina Ghimire</title>
+<meta name="description" content="Angelina Ghimire — minds, machines, and ethics.">
+<link rel="icon" href="data:,">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper: #faf9f5;
+    --ink: #1c1f1d;
+    --ink-soft: #4b4f4a;
+    --accent: #2f5d50;
+    --line: #dedad0;
+    --max: 640px;
+  }
+
+  *{ box-sizing: border-box; }
+
+  html{ scroll-behavior: smooth; }
+
+  body{
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Public Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 17px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap{
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 3.5rem 1.5rem 4rem;
+  }
+
+  nav{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+  }
+
+  nav a{
+    color: var(--ink-soft);
+    text-decoration: none;
+    font-size: 0.95rem;
+    letter-spacing: 0.01em;
+    padding-bottom: 3px;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.15s ease, color 0.15s ease;
+  }
+
+  nav a:hover{
+    color: var(--ink);
+    border-color: var(--line);
+  }
+
+  nav a[aria-current="page"]{
+    color: var(--ink);
+    border-color: var(--accent);
+  }
+
+  h1{
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 500;
+    font-size: 2.5rem;
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+    margin: 0 0 0.5rem;
+  }
+
+  .tagline{
+    font-family: 'Fraunces', Georgia, serif;
+    font-style: italic;
+    font-weight: 400;
+    color: var(--accent);
+    font-size: 1.15rem;
+    margin: 0 0 2.25rem;
+  }
+
+  p{
+    margin: 0 0 1.25rem;
+    max-width: 60ch;
+  }
+
+  a{
+    color: var(--accent);
+    text-decoration-color: rgba(47, 93, 80, 0.35);
+    text-underline-offset: 2px;
+  }
+
+  a:hover{
+    text-decoration-color: var(--accent);
+  }
+
+  .socials{
+    margin-top: 2.5rem;
+    padding-top: 1.75rem;
+    border-top: 1px solid var(--line);
+    display: flex;
+    gap: 1.25rem;
+    flex-wrap: wrap;
+    font-size: 0.95rem;
+  }
+
+  .socials a{
+    color: var(--ink-soft);
+  }
+
+  .socials a:hover{
+    color: var(--accent);
+  }
+
+  .highlights{
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--line);
+  }
+
+  .highlights h2{
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 500;
+    font-size: 1.6rem;
+    letter-spacing: -0.01em;
+    margin: 0 0 1.75rem;
+  }
+
+  .highlight{
+    padding: 1.75rem 0;
+    border-top: 1px solid var(--line);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .highlight:first-of-type{
+    border-top: none;
+    padding-top: 0;
+  }
+
+  .h-photo{
+    margin: 0;
+  }
+
+  .h-photo img{
+    width: 100%;
+    max-width: 320px;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 3px;
+    border: 1px solid var(--line);
+    background: #efece3;
+    display: block;
+  }
+
+  .highlight h3{
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 500;
+    font-size: 1.15rem;
+    margin: 0 0 0.2rem;
+  }
+
+  .h-org{
+    margin: 0 0 0.1rem;
+    color: var(--ink);
+    font-weight: 500;
+    font-size: 0.95rem;
+  }
+
+  .h-meta{
+    margin: 0 0 0.6rem;
+    color: var(--ink-soft);
+    font-size: 0.85rem;
+  }
+
+  .highlight p{
+    font-size: 0.97rem;
+  }
+
+  .h-roles{
+    list-style: none;
+    margin: 0.75rem 0 0;
+    padding: 0 0 0 1rem;
+    border-left: 1px solid var(--line);
+  }
+
+  .h-roles li{
+    margin-bottom: 0.9rem;
+  }
+
+  .h-roles li:last-child{
+    margin-bottom: 0;
+  }
+
+  .h-role-title{
+    display: block;
+    font-weight: 500;
+    font-size: 0.95rem;
+  }
+
+  @media (min-width: 560px){
+    .highlight{
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 1.5rem;
+    }
+
+    .h-photo{
+      flex: 0 0 160px;
+    }
+
+    .h-photo img{
+      max-width: 160px;
+    }
+
+    .h-body{
+      flex: 1;
+      min-width: 0;
+    }
+  }
+
+  footer{
+    margin-top: 3rem;
+    font-size: 0.85rem;
+    color: #8f8b7f;
+  }
+
+  @media (max-width: 480px){
+    h1{ font-size: 2.1rem; }
+    .wrap{ padding-top: 2.5rem; }
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+
+    <nav>
+      <a href="index.html" aria-current="page">about</a>
+      <a href="#" title="coming soon">writing</a>
+      <a href="#" title="coming soon">notes</a>
+      <a href="#" title="coming soon">research</a>
+      <a href="#" title="coming soon">projects</a>
+    </nav>
+
+    <h1>Angelina Ghimire</h1>
+    <p class="tagline">technology that keeps people at the center</p>
+
+    <p>
+      Hi there. I'm passionate about understanding minds, machines, and ethics to
+      create human-centered technologies that better the world. In undergrad, I
+      studied Computer Science at Kathmandu University. My only goal is to advance
+      science and humanity. If you've got any ideas,
+      <a href="mailto:angelinaghimire.cs@gmail.com">ping me</a>.
+    </p>
+
+    <div class="socials">
+      <a href="mailto:angelinaghimire.cs@gmail.com">email</a>
+    </div>
+
+    <section class="highlights">
+      <h2>Highlights</h2>
+
+      <article class="highlight">
+        <figure class="h-photo">
+          <img src="images/seeds-for-the-future.jpg" alt="Angelina on stage in Shenzhen holding her Seeds for the Future award">
+        </figure>
+        <div class="h-body">
+          <h3>National Finalist</h3>
+          <p class="h-org">Huawei Seeds For The Future</p>
+          <p class="h-meta">Jul 2024 – Dec 2024 · Shenzhen, Guangdong, China</p>
+          <p>I was selected to represent Nepal at the Tech4Good competition in
+            China, where my team built and pitched an AI-based ultrasound
+            solution. Pitching in front of hundreds of people is still one of
+            my proudest moments — and we ended up walking away with the
+            People's Choice Award.</p>
+        </div>
+      </article>
+
+      <article class="highlight">
+        <figure class="h-photo">
+          <img src="images/wlit-graduation.jpg" alt="Angelina with her WLiT cohort at their graduation">
+        </figure>
+        <div class="h-body">
+          <h3>Fellow</h3>
+          <p class="h-org">Women Leaders in Technology (WLiT)</p>
+          <p class="h-meta">Oct 2023 – Jun 2024 · Kathmandu, Bagmati, Nepal</p>
+          <p>I spent nine months as part of a 15-woman cohort, working through
+            an intensive JavaScript, Node.js, and MongoDB boot camp taught
+            entirely by women, alongside leadership sessions on design thinking
+            and problem solving. I was also mentored one-on-one by
+            <a href="https://www.linkedin.com/in/noragurung/" target="_blank" rel="noopener">Nora Asha Gurung</a>.</p>
+        </div>
+      </article>
+
+      <article class="highlight">
+        <figure class="h-photo">
+          <img src="images/kucc.jpg" alt="Angelina at a KUCC event">
+        </figure>
+        <div class="h-body">
+          <h3>Kathmandu University Computer Club — KUCC</h3>
+          <p class="h-meta">Dec 2021 – Mar 2024</p>
+          <p>I served as an Executive Member and later as Vice President of
+            KUCC, KU's departmental computer club. Alongside co-leading
+            flagship events like KU IT Meet and KU Hackfest — which together
+            drew over 5,000 participants — and organizing 20+ workshops on
+            emerging technologies, I was also Editor-in-Chief of IT Express,
+            where I led a 15-member editorial team through content strategy,
+            editing, and design to publish 300+ copies reaching 1,500+ readers.</p>
+        </div>
+      </article>
+    </section>
+
+    <footer>&copy; 2026 Angelina Ghimire. Hosted on GitHub Pages.</footer>
+
+  </div>
+</body>
+</html>
