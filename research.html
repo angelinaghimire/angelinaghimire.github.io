@@ -1,1 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <title>Research &amp; Writing — Angelina Ghimire</title>
+  <meta
+    name="description"
+    content="Research and writing by Angelina Ghimire."
+  >
+
+  <link rel="icon" href="data:,">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Public+Sans:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+    :root {
+      --paper: #faf9f5;
+      --ink: #1c1f1d;
+      --ink-soft: #4b4f4a;
+      --accent: #2f5d50;
+      --line: #dedad0;
+      --muted: #8f8b7f;
+      --placeholder: #efece3;
+      --max-width: 640px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: "Public Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+      font-size: 17px;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .wrap {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 3.5rem 1.5rem 4rem;
+    }
+
+    /* Navigation */
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      margin-bottom: 3rem;
+    }
+
+    nav a {
+      color: var(--ink-soft);
+      text-decoration: none;
+      font-size: 0.95rem;
+      letter-spacing: 0.01em;
+      padding-bottom: 3px;
+      border-bottom: 1px solid transparent;
+      transition:
+        color 0.15s ease,
+        border-color 0.15s ease;
+    }
+
+    nav a:hover {
+      color: var(--ink);
+      border-color: var(--line);
+    }
+
+    nav a[aria-current="page"] {
+      color: var(--ink);
+      border-color: var(--accent);
+    }
+
+    /* Header */
+
+    h1,
+    h2,
+    h3 {
+      font-family: "Fraunces", Georgia, serif;
+    }
+
+    h1 {
+      margin: 0 0 0.5rem;
+      font-size: 2.5rem;
+      line-height: 1.15;
+      font-weight: 500;
+      letter-spacing: -0.01em;
+    }
+
+    .tagline {
+      margin: 0 0 2.25rem;
+      color: var(--accent);
+      font-family: "Fraunces", Georgia, serif;
+      font-size: 1.15rem;
+      font-style: italic;
+    }
+
+    p {
+      max-width: 60ch;
+      margin: 0 0 1.25rem;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration-color: rgba(47, 93, 80, 0.35);
+      text-underline-offset: 2px;
+    }
+
+    a:hover {
+      text-decoration-color: var(--accent);
+    }
+
+    /* Sections */
+
+    .section {
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--line);
+    }
+
+    .section h2 {
+      margin: 0 0 0.4rem;
+      font-size: 1.6rem;
+      line-height: 1.2;
+      font-weight: 500;
+      letter-spacing: -0.01em;
+    }
+
+    .section-note {
+      margin: 0 0 1.75rem;
+      color: var(--ink-soft);
+      font-size: 0.95rem;
+    }
+
+    /* Entries */
+
+    .entry {
+      padding: 1.75rem 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .entry:first-of-type {
+      padding-top: 0;
+      border-top: none;
+    }
+
+    .entry h3 {
+      margin: 0 0 0.2rem;
+      font-size: 1.15rem;
+      line-height: 1.35;
+      font-weight: 500;
+    }
+
+    .e-meta {
+      margin: 0 0 0.65rem;
+      color: var(--accent);
+      font-family: "Fraunces", Georgia, serif;
+      font-style: italic;
+      font-size: 0.92rem;
+    }
+
+    .entry p {
+      font-size: 0.97rem;
+    }
+
+    .e-tags {
+      margin: 0.9rem 0 0;
+      color: var(--muted);
+      font-size: 0.82rem;
+      letter-spacing: 0.01em;
+    }
+
+    .e-link {
+      margin-top: 0.6rem;
+      font-size: 0.95rem;
+    }
+
+    /* Footer */
+
+    footer {
+      margin-top: 3rem;
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+
+    @media (max-width: 480px) {
+      .wrap {
+        padding-top: 2.5rem;
+      }
+
+      h1 {
+        font-size: 2.1rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="wrap">
+
+    <nav aria-label="Main navigation">
+      <a href="index.html">about</a>
+      <a href="projects.html">projects</a>
+      <a href="research.html" aria-current="page">research &amp; writing</a>
+      <a href="#" title="Coming soon">personal</a>
+    </nav>
+
+    <header>
+      <h1>Research &amp; Writing</h1>
+      <p class="tagline">questions I've followed far enough to write down</p>
+
+      <p>
+        Writing across the things I find myself curious about:
+        sometimes healthcare and human-computer interaction, sometimes
+        wherever else the questions lead.
+      </p>
+    </header>
+
+    <section class="section" aria-labelledby="papers-title">
+      <h2 id="papers-title">Papers &amp; Presentations</h2>
+
+      <article class="entry">
+        <h3>Automated Quality Assessment of Blind Sweep Obstetric Ultrasound for Improved Diagnosis</h3>
+        <p class="e-meta">MIDL 2026 · in collaboration with GE HealthCare</p>
+
+        <p>
+          Studied how real-world acquisition errors like reversed sweep
+          direction, probe inversion, incomplete coverage degrade AI
+          performance on obstetric ultrasound tasks (fetal presentation,
+          placenta location, sweep classification), using a dataset of
+          8,000+ studies from clinical sites in the US and Zambia. Built
+          automated quality-assessment models that detect these deviations
+          with high accuracy, and showed that flagging and re-acquiring
+          poor-quality sweeps meaningfully improves downstream diagnostic
+          reliability.
+        </p>
+
+        <p class="e-tags">
+          Medical Imaging · Video Transformers (MViT) · Quality Assessment · Robustness
+        </p>
+
+        <p class="e-link">
+          <a
+            href="https://arxiv.org/pdf/2603.25886"
+            target="_blank"
+            rel="noopener noreferrer"
+          >read the paper →</a>
+        </p>
+      </article>
+
+      <article class="entry">
+        <h3>AI-Powered Task-Shifting for High-Quality Obstetrics Ultrasound Services in Community Healthcare Settings</h3>
+        <p class="e-meta">Presentation · National Summit of Health and Population Scientists, Nepal</p>
+
+        <p>
+          Co-authored a real-world implementation account of
+          deploying an AI-assisted obstetric ultrasound system for
+          task-shifting in low-resource community healthcare settings
+          across Nepal covering system design, deployment logistics, and
+          the practical challenges of introducing AI-supported care where
+          devices, protocols, and provider training vary.
+        </p>
+
+        <p class="e-tags">
+          Systems Design · Clinical Deployment · LMIC Health AI
+        </p>
+
+        <p class="e-link">
+          <a
+            href="http://103.69.126.140:8080/bitstream/20.500.14356/2897/1/8.RanjanaKoirala_AIHealth_NHRC%20%281%29.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+          >view the presentation →</a>
+        </p>
+      </article>
+
+      <article class="entry">
+        <h3>The Architecture of Attraction</h3>
+        <p class="e-meta">How dating app interface design shapes user perception and trust</p>
+
+        <p>
+          A comparative HCI study of Tinder and Bumble, examining how
+          design choices like profile structure, swipe mechanics, messaging,
+          color, and filtering  shape user expectations and behavior.
+          Combined a structural analysis of both platforms with a
+          54-person user survey and statistical triangulation.
+        </p>
+
+        <p class="e-tags">
+          HCI · User Research · Survey Design
+        </p>
+
+        <p class="e-link">
+          <a
+            href="https://drive.google.com/file/d/1Xz17jIjBCBCM7bR9opQj9M204a2Xu2no/view?ths=true"
+            target="_blank"
+            rel="noopener noreferrer"
+          >read the paper →</a>
+        </p>
+      </article>
+
+      <article class="entry">
+        <h3>Analyzing 51% Attacks in Blockchain</h3>
+        <p class="e-meta">A review of consensus vulnerabilities and ML-based detection</p>
+
+        <p>
+          A survey of 51% attack mechanics across Proof-of-Work and
+          Proof-of-Stake systems, examining real-world incidents (Bitcoin
+          SV, Ethereum Classic, Verge) and evaluating machine learning
+          approaches — autoencoders, LSTMs, graph neural networks — for
+          early attack detection. Proposes a multi-metric framework for
+          evaluating blockchain resilience.
+        </p>
+
+        <p class="e-tags">
+          Blockchain · Security · Machine Learning
+        </p>
+
+        <p class="e-link">
+          <a href="#" target="_blank" rel="noopener noreferrer">read the paper →</a>
+        </p>
+      </article>
+
+    </section>
+
+    <footer>
+      &copy; 2026 Angelina Ghimire · Hosted on GitHub Pages
+    </footer>
+
+  </main>
+</body>
+</html>
