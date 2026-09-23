@@ -249,112 +249,165 @@
     <!-- Page intro -->
 
     <header>
-
       <p class="intro">
         A few things I've built, experimented with, and learned from along the way.
       </p>
     </header>
 
-    
+
+    <!-- Featured -->
 
     <h1>Featured</h1>
 
-    <article class="project">
+    <section class="projects" aria-label="Featured projects">
 
-  <h2>Neural Networks from Scratch</h2>
 
-  <p class="project-subtitle">
-    Building a neural network from the ground up
-  </p>
+      <!-- Hippocampus Segmentation -->
 
-  <p>
-    A NumPy implementation of a two-layer neural network built from scratch
-    to understand the mechanics behind deep learning. I implemented
-    forward and backpropagation, multiple activation functions and weight
-    initializers, loss functions, and optimizers, then ran a grid of
-    experiments to compare their effects on MNIST classification.
-  </p>
+      <article class="project">
 
-  <p class="tech">
-    Python · NumPy · Jupyter
-  </p>
-
-  <p class="project-link">
-    <a
-      href="https://github.com/angelinaghimire/Neural-Networks-from-Scratch"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      view the project →
-    </a>
-  </p>
-
-</article>
-    
-    <!-- Featured projects -->
-    <article class="project">
-
-       <div class="project-images">
-
+        <div class="project-images">
           <img
             src="images/hippocampus.png"
-            alt="MorphoSys grant proposal interface"
+            alt="Hippocampus segmentation from a brain MRI scan"
           >
         </div>
 
-<h2>Hippocampus Segmentation</h2>
+        <h2>Hippocampus Segmentation</h2>
 
-  <p class="project-subtitle">
-    Segmenting the hippocampus from brain MRI scans
-  </p>
+        <p class="project-subtitle">
+          Segmenting the hippocampus from brain MRI scans
+        </p>
 
-  <p>
-    A medical imaging project exploring automatic hippocampus segmentation
-    from T1-weighted MRI scans using deep learning. I worked with 3D MRI
-    volumes and implemented an Attention U-Net to learn pixel-level
-    segmentation of the hippocampus.
-  </p>
+        <p>
+          A medical imaging project exploring automatic hippocampus
+          segmentation from T1-weighted MRI scans using deep learning.
+          I worked with 3D MRI volumes and implemented an Attention U-Net
+          to learn pixel-level segmentation of the hippocampus.
+        </p>
 
-  <p class="tech">
-    Python · PyTorch · Attention U-Net · 3D MRI
-  </p>
+        <p class="tech">
+          Python · PyTorch · Attention U-Net · 3D MRI
+        </p>
 
-  <p class="project-link">
-    <a
-      href="https://github.com/angelinaghimire/HippocampusSegmentation/blob/main/AttentionUnet_HippocampusSegmentation.ipynb"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      view the project →
-    </a>
-  </p>
+        <p class="project-link">
+          <a
+            href="https://github.com/angelinaghimire/HippocampusSegmentation/blob/main/AttentionUnet_HippocampusSegmentation.ipynb"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            view the project →
+          </a>
+        </p>
 
-</article>
+      </article>
 
-    <section class="projects" aria-label="Featured projects">
+
+      <!-- Abhilekh -->
 
       <article class="project">
-        
 
         <div class="project-images">
+          <img
+            src="images/abhilekh.png"
+            alt="Abhilekh image processing interface for Newari stone inscriptions"
+          >
+        </div>
 
+        <h2>Abhilekh</h2>
+
+        <p class="project-subtitle">
+          Image processing for Newari stone inscriptions
+        </p>
+
+        <p>
+          An image-processing system for preserving and studying historical
+          Newari stone inscriptions. I implemented and compared thresholding
+          methods including Sauvola, Otsu, Niblack, and FEAT, along with
+          Fast Fourier Transform-based edge detection, to separate engraved
+          text from the irregular surfaces and shadows of stone.
+        </p>
+
+        <p class="tech">
+          Python · Flutter · Flask · OpenCV · Image Processing
+        </p>
+
+        <p class="project-link">
+          <a
+            href="YOUR-ABHILEKH-LINK"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            view the project →
+          </a>
+        </p>
+
+      </article>
+
+
+      <!-- Procos V -->
+
+      <article class="project">
+
+        <div class="project-images">
+          <img
+            src="images/procosv.png"
+            alt="Procos V graphical programming environment"
+          >
+        </div>
+
+        <h2>Procos V</h2>
+
+        <p class="project-subtitle">
+          A programming language for drawing geometric shapes
+        </p>
+
+        <p>
+          A custom-interpreted language and graphical programming environment
+          that lets users draw and manipulate geometric shapes through code.
+          I built the lexer, parser, interpreter, shape hierarchy, control-flow
+          constructs, and GUI, with support for variables, loops, conditionals,
+          methods, and error handling.
+        </p>
+
+        <p class="tech">
+          C# · .NET · Windows Forms · System.Drawing · MSTest
+        </p>
+
+        <p class="project-link">
+          <a
+            href="YOUR-PROCOSV-LINK"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            view the project →
+          </a>
+        </p>
+
+      </article>
+
+
+      <!-- MorphoSys -->
+
+      <article class="project">
+
+        <div class="project-images">
           <img
             src="images/morphosys.png"
             alt="MorphoSys grant proposal interface"
           >
         </div>
 
-        <!-- Morphosys -->
-        
         <h2>MorphoSys</h2>
+
         <p class="project-subtitle">
           From Concept to Grant
         </p>
 
         <p>
-           An AI-assisted grant proposal system that helps users find relevant
-        funding opportunities, research local context, and build proposals
-        tailored to Nepal.
+          An AI-assisted grant proposal system that helps users find relevant
+          funding opportunities, research local context, and build proposals
+          tailored to Nepal.
         </p>
 
         <p class="tech">
@@ -373,28 +426,33 @@
 
       </article>
 
-       <article class="project">
-        
+
+      <!-- Naritwa -->
+
+      <article class="project">
 
         <div class="project-images">
-
           <img
             src="images/naritwa.jpg"
-            alt="MorphoSys grant proposal interface"
+            alt="Naritwa legal rights chatbot"
           >
         </div>
 
-      <h2>Naritwa</h2>
+        <h2>Naritwa</h2>
+
         <p class="project-subtitle">
-         A chatbot for learning about women's legal rights
+          A chatbot for learning about women's legal rights
         </p>
 
         <p>
-           A Rasa-powered chatbot that helps women find and understand information about their legal rights through conversational questions. We designed it to make legal information easier to access and navigate without having to work through legal documents on your own.
+          A chatbot that helps women find and understand information about
+          their legal rights through conversational questions. We designed
+          it to make legal information easier to access and navigate without
+          having to work through legal documents on your own.
         </p>
 
         <p class="tech">
-          Python · Rasa · HTML/CSS · JavaScript
+          Python · LangChain · Llama 2 · Pinecone · React
         </p>
 
         <p class="project-link">
@@ -409,34 +467,82 @@
 
       </article>
 
+    </section>
+
+
+    <!-- Little Things -->
+
+    <h2 class="section-heading">
+      Little Things
+    </h2>
+
+    <section class="projects" aria-label="Smaller projects">
+
+
+      <!-- Neural Networks from Scratch -->
+
+      <article class="project">
+
+        <h2>Neural Networks from Scratch</h2>
+
+        <p class="project-subtitle">
+          Building a neural network from the ground up
+        </p>
+
+        <p>
+          A NumPy implementation of a two-layer neural network built from
+          scratch to understand the mechanics behind deep learning. I
+          implemented forward and backpropagation, multiple activation
+          functions and weight initializers, loss functions, and optimizers,
+          then ran a grid of experiments to compare their effects on
+          MNIST classification.
+        </p>
+
+        <p class="tech">
+          Python · NumPy · Jupyter
+        </p>
+
+        <p class="project-link">
+          <a
+            href="https://github.com/angelinaghimire/Neural-Networks-from-Scratch"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            view the project →
+          </a>
+        </p>
+
+      </article>
+
 
       <!-- Chhaano -->
 
       <article class="project">
-        
 
         <div class="project-images">
+
           <img
             src="images/ch1.png"
-            alt="Chhaano search filters"
+            alt="Chhaano rental search filters"
           >
 
           <img
             src="images/ch2.png"
             alt="Chhaano rental listings"
           >
+
         </div>
 
-        
         <h2>Chhaano</h2>
+
         <p class="project-subtitle">
           An online room-rental marketplace for Kathmandu University students
         </p>
 
         <p>
-          Students can discover rental listings,
-          filter them by price, location, property type, and amenities,
-          view properties on an interactive map, and contact landlords.
+          Students can discover rental listings, filter them by price,
+          location, property type, and amenities, view properties on an
+          interactive map, and contact landlords.
         </p>
 
         <p class="tech">
@@ -454,46 +560,6 @@
         </p>
 
       </article>
-
-
-      <!-- Little Things -->
-
-      <h2 class="section-heading">
-        Little Things
-      </h2>
-
-
-      <!-- Add smaller projects here -->
-
-      <!--
-      <article class="project">
-
-        <h2>Project Name</h2>
-
-        <p class="project-subtitle">
-          Short description
-        </p>
-
-        <p>
-          Tell the story of the project here.
-        </p>
-
-        <p class="tech">
-          Python · C · etc.
-        </p>
-
-        <p class="project-link">
-          <a
-            href="YOUR-LINK"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            view the project →
-          </a>
-        </p>
-
-      </article>
-      -->
 
     </section>
 
