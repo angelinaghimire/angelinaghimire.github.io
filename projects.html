@@ -1,670 +1,572 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Projects — Angelina Ghimire</title>
+<title>Projects — Angelina Ghimire</title>
 
-  <meta
-    name="description"
-    content="Projects by Angelina Ghimire."
-  >
+<meta
+  name="description"
+  content="Projects by Angelina Ghimire."
+>
 
-  <link rel="icon" href="data:,">
+<link rel="icon" href="data:,">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <link
-    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Public+Sans:wght@400;500;600&display=swap"
-    rel="stylesheet"
-  >
+<link
+  href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Public+Sans:wght@400;500;600&display=swap"
+  rel="stylesheet"
+>
 
-  <style>
-    :root {
-      --paper: #faf9f5;
-      --ink: #1c1f1d;
-      --ink-soft: #4b4f4a;
-      --accent: #2f5d50;
-      --line: #dedad0;
-      --muted: #8f8b7f;
-      --placeholder: #efece3;
-      --max-width: 900px;
-    }
+<style>
+:root {
+  --paper: #faf9f5;
+  --ink: #1c1f1d;
+  --ink-soft: #4b4f4a;
+  --accent: #2f5d50;
+  --line: #dedad0;
+  --muted: #8f8b7f;
+  --placeholder: #efece3;
+  --max-width: 900px;
+}
 
-    * {
-      box-sizing: border-box;
-    }
+* {
+  box-sizing: border-box;
+}
 
-    html {
-      scroll-behavior: smooth;
-    }
+html {
+  scroll-behavior: smooth;
+}
 
-    body {
-      margin: 0;
-      background: var(--paper);
-      color: var(--ink);
-      font-family: "Public Sans", -apple-system, BlinkMacSystemFont, sans-serif;
-      font-size: 17px;
-      line-height: 1.65;
-      -webkit-font-smoothing: antialiased;
-    }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "Public Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 17px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
 
-    .wrap {
-      max-width: var(--max-width);
-      margin: 0 auto;
-      padding: 3.5rem 1.5rem 4rem;
-    }
+.wrap {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 3.5rem 1.5rem 4rem;
+}
 
-    /* Navigation */
+/* Navigation */
 
-    nav {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1.5rem;
-      margin-bottom: 3rem;
-    }
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
 
-    nav a {
-      color: var(--ink-soft);
-      text-decoration: none;
-      font-size: 0.95rem;
-      letter-spacing: 0.01em;
-      padding-bottom: 3px;
-      border-bottom: 1px solid transparent;
-      transition:
-        color 0.15s ease,
-        border-color 0.15s ease;
-    }
+nav a {
+  color: var(--ink-soft);
+  text-decoration: none;
+  font-size: 0.95rem;
+  letter-spacing: 0.01em;
+  padding-bottom: 3px;
+  border-bottom: 1px solid transparent;
+  transition:
+    color 0.15s ease,
+    border-color 0.15s ease;
+}
 
-    nav a:hover {
-      color: var(--ink);
-      border-color: var(--line);
-    }
+nav a:hover {
+  color: var(--ink);
+  border-color: var(--line);
+}
 
-    nav a[aria-current="page"] {
-      color: var(--ink);
-      border-color: var(--accent);
-    }
+nav a[aria-current="page"] {
+  color: var(--ink);
+  border-color: var(--accent);
+}
 
-    /* Typography */
+/* Typography */
 
-    h1,
-    h2,
-    h3 {
-      font-family: "Fraunces", Georgia, serif;
-    }
+h1,
+h2,
+h3 {
+  font-family: "Fraunces", Georgia, serif;
+}
 
-    h1 {
-      margin: 0 0 0.6rem;
-      font-size: 2.5rem;
-      line-height: 1.15;
-      font-weight: 500;
-      letter-spacing: -0.01em;
-    }
+h1 {
+  margin: 0 0 0.5rem;
+  font-size: 2.5rem;
+  line-height: 1.15;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
 
-    h2 {
-      margin: 0 0 0.25rem;
-      font-size: 1.65rem;
-      line-height: 1.25;
-      font-weight: 500;
-    }
+h2 {
+  margin: 0 0 0.25rem;
+  font-size: 1.6rem;
+  line-height: 1.2;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
 
-    p {
-      margin: 0 0 1.25rem;
-    }
+p {
+  margin: 0 0 1.25rem;
+}
 
-    .tagline {
-      margin: 0 0 2.25rem;
-      color: var(--accent);
-      font-family: "Fraunces", Georgia, serif;
-      font-size: 1.15rem;
-      font-style: italic;
-    }
+.tagline {
+  margin: 0 0 2.25rem;
+  color: var(--accent);
+  font-family: "Fraunces", Georgia, serif;
+  font-size: 1.15rem;
+  font-style: italic;
+}
 
-    a {
-      color: var(--accent);
-      text-decoration-color: rgba(47, 93, 80, 0.35);
-      text-underline-offset: 2px;
-    }
+a {
+  color: var(--accent);
+  text-decoration-color: rgba(47, 93, 80, 0.35);
+  text-underline-offset: 2px;
+}
 
-    a:hover {
-      text-decoration-color: var(--accent);
-    }
+a:hover {
+  text-decoration-color: var(--accent);
+}
 
-    /* Section headings */
+/* Projects */
 
-    .section-heading {
-      margin: 4rem 0 0;
-      padding-top: 2rem;
-      border-top: 1px solid var(--line);
-      font-size: 1.8rem;
-    }
+.projects {
+  margin-top: 3rem;
+}
 
-    .section-intro {
-      margin-top: 0.75rem;
-      color: var(--ink-soft);
-    }
+.project {
+  padding: 2rem 0;
+  border-top: 1px solid var(--line);
+}
 
-    /* Projects */
+.project:first-child {
+  padding-top: 0;
+  border-top: none;
+}
 
-    .projects {
-      margin-top: 2.5rem;
-    }
+/* Image + text layout */
 
-    .project {
-      padding: 2rem 0;
-      border-top: 1px solid var(--line);
-    }
+.project-content {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 2.5rem;
+  align-items: start;
+}
 
-    .project:first-child {
-      border-top: none;
-      padding-top: 0;
-    }
+/* Project images */
 
-    /* Image + text layout */
+.project-images {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 0;
+}
 
-    .project-content {
-      display: grid;
-      grid-template-columns: 450px 1fr;
-      gap: 2.5rem;
-      align-items: start;
-    }
+.project-images img {
+  display: block;
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  margin: 0;
+  background: var(--placeholder);
+  border: 1px solid var(--line);
+  border-radius: 3px;
+}
 
-    /* Project images */
+/* Project text */
 
-    .project-images {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      margin: 0;
-    }
+.project-text {
+  padding-top: 0.1rem;
+}
 
-    .project-images img {
-      display: block;
-      width: 100%;
-      max-width: 450px;
-      height: auto;
-      margin: 0 auto;
-      background: var(--placeholder);
-      border: 1px solid var(--line);
-      border-radius: 3px;
-    }
+.project-subtitle {
+  margin: 0 0 0.8rem;
+  color: var(--ink-soft);
+  font-size: 0.9rem;
+}
 
-    /* Project text */
+.project p {
+  font-size: 0.97rem;
+}
 
-    .project-text {
-      padding-top: 0.1rem;
-    }
+.tech {
+  margin: 1rem 0 1.25rem;
+  color: var(--muted);
+  font-size: 0.82rem !important;
+  letter-spacing: 0.01em;
+}
 
-    .project-subtitle {
-      margin: 0 0 0.8rem;
-      color: var(--ink-soft);
-      font-size: 0.9rem;
-    }
+.project-link {
+  font-size: 0.92rem !important;
+}
 
-    .project p {
-      font-size: 0.97rem;
-    }
+/* Section headings */
 
-    .tech {
-      margin: 1rem 0 1.25rem;
-      color: var(--muted);
-      font-size: 0.82rem !important;
-      letter-spacing: 0.01em;
-    }
+.section-heading {
+  margin: 4rem 0 0;
+  padding-top: 2rem;
+  border-top: 1px solid var(--line);
+  font-size: 1.6rem;
+  line-height: 1.2;
+  font-weight: 500;
+}
 
-    .project-link {
-      font-size: 0.92rem !important;
-    }
+.section-intro {
+  margin-top: 0.75rem;
+  color: var(--ink-soft);
+}
 
-    /* Footer */
+/* Footer */
 
-    footer {
-      margin-top: 3rem;
-      color: var(--muted);
-      font-size: 0.85rem;
-    }
+footer {
+  margin-top: 3rem;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
 
-    /* Responsive */
+/* Responsive */
 
-    @media (max-width: 800px) {
-      .project-content {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-      }
+@media (max-width: 800px) {
+  .project-content {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
 
-      .project-images img {
-        max-width: 450px;
-        margin: 0 auto;
-      }
-    }
+  .project-images img {
+    max-width: 450px;
+  }
+}
 
-    @media (max-width: 480px) {
-      .wrap {
-        padding-top: 2.5rem;
-      }
+@media (max-width: 480px) {
+  .wrap {
+    padding-top: 2.5rem;
+  }
 
-      h1 {
-        font-size: 2.1rem;
-      }
+  h1 {
+    font-size: 2.1rem;
+  }
 
-      .section-heading {
-        font-size: 1.6rem;
-      }
-
-      .project-images img {
-        max-width: 100%;
-      }
-    }
-  </style>
-
+  .project-images img {
+    max-width: 100%;
+  }
+}
+</style>
 </head>
 
 <body>
-
-  <main class="wrap">
-
-    <!-- Navigation -->
-
-    <nav aria-label="Main navigation">
-      <a href="index.html">about</a>
-
-      <a href="projects.html" aria-current="page">
-        projects
-      </a>
-
-      <a href="research.html">
-        research &amp; writing
-      </a>
-
-      <a href="#" title="Coming soon">
-        personal
-      </a>
-    </nav>
-
-
-    <!-- Page intro -->
-
-    <header>
-      <h1>Featured</h1>
-
-      <p class="tagline">
-        technology that keeps people at the center
-      </p>
-    </header>
-
-
-    <!-- Featured Projects -->
-
-    <section class="projects" aria-label="Featured projects">
-
-
-      <!-- Hippocampus Segmentation -->
-
-      <article class="project">
-
-        <div class="project-content">
-
-          <div class="project-images">
-            <img
-              src="images/hippocampus.png"
-              alt="Hippocampus segmentation from a brain MRI scan"
-            >
-          </div>
-
-          <div class="project-text">
-
-            <h2>Hippocampus Segmentation</h2>
-
-            <p class="project-subtitle">
-              Segmenting the hippocampus from brain MRI scans
-            </p>
-
-            <p>
-              A medical imaging project exploring automatic hippocampus
-              segmentation from T1-weighted MRI scans using deep learning.
-              Worked with 3D MRI volumes and compared U-Net, Attention U-Net
-              and nn-UNet architectures to learn pixel-level segmentation of
-              the hippocampus.
-            </p>
-
-            <p class="tech">
-              Python · PyTorch · U-Net and variants · 3D MRI
-            </p>
-
-            <p class="project-link">
-              <a
-                href="https://github.com/angelinaghimire/HippocampusSegmentation/blob/main/AttentionUnet_HippocampusSegmentation.ipynb"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                view the project →
-              </a>
-            </p>
-
-          </div>
-
-        </div>
-
-      </article>
-
-
-      <!-- Abhilekh -->
-
-      <article class="project">
-
-        <div class="project-content">
-
-          <div class="project-images">
-            <img
-              src="images/abhilekh.png"
-              alt="Abhilekh image processing interface for Newari stone inscriptions"
-            >
-          </div>
-
-          <div class="project-text">
-
-            <h2>Abhilekh</h2>
-
-            <p class="project-subtitle">
-              Image processing for Newari stone inscriptions
-            </p>
-
-            <p>
-              An image-processing system for preserving and studying historical
-              Newari stone inscriptions. Implemented and compared thresholding
-              methods including Sauvola, Otsu, Niblack, and FEAT, along with
-              Fast Fourier Transform-based edge detection, to separate engraved
-              text from the irregular surfaces and shadows of stone.
-            </p>
-
-            <p class="tech">
-              Python · Flutter · Flask · OpenCV · Image Processing
-            </p>
-
-            <p class="project-link">
-              <a
-                href="https://drive.google.com/file/d/1SEFBKQx6RlosrWiKsFvUNGbQQBAFkPAu/view?ths=true"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                view the project →
-              </a>
-            </p>
-
-          </div>
-
-        </div>
-
-      </article>
-
-
-      <!-- Procos V -->
-
-      <article class="project">
-
-        <div class="project-content">
-
-          <div class="project-images">
-            <img
-              src="images/ProcosV.png"
-              alt="Procos V graphical programming environment"
-            >
-          </div>
-
-          <div class="project-text">
-
-            <h2>Procos V</h2>
-
-            <p class="project-subtitle">
-              A programming language for drawing geometric shapes
-            </p>
-
-            <p>
-              A custom-interpreted language and graphical programming environment
-              that lets users draw and manipulate geometric shapes through code.
-              Equipped with a lexer, parser, interpreter, shape hierarchy,
-              control-flow constructs, and GUI, with support for variables, loops,
-              conditionals, methods, and error handling.
-            </p>
-
-            <p class="tech">
-              C# · .NET · Windows Forms · System.Drawing · MSTest
-            </p>
-
-          </div>
-
-        </div>
-
-      </article>
-
-
-      <!-- MorphoSys -->
-
-      <article class="project">
-
-        <div class="project-content">
-
-          <div class="project-images">
-            <img
-              src="images/morphosys.png"
-              alt="MorphoSys grant proposal interface"
-            >
-          </div>
-
-          <div class="project-text">
-
-            <h2>MorphoSys</h2>
-
-            <p class="project-subtitle">
-              AI-assisted grant proposal development
-            </p>
-
-            <p>
-              An AI-assisted grant proposal system that helps users find relevant
-              funding opportunities, research local context, and build proposals
-              tailored to Nepal.
-            </p>
-
-            <p class="tech">
-              Python · LangChain · LangGraph · MongoDB · OpenAI
-            </p>
-
-            <p class="project-link">
-              <a
-                href="https://github.com/angelinaghimire/morphosys"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                view the project →
-              </a>
-            </p>
-
-          </div>
-
-        </div>
-
-      </article>
-
-
-      <!-- Naritwa -->
-
-      <article class="project">
-
-        <div class="project-content">
-
-          <div class="project-images">
-            <img
-              src="images/naritwa.jpg"
-              alt="Naritwa legal rights chatbot"
-            >
-          </div>
-
-          <div class="project-text">
-
-            <h2>Naritwa</h2>
-
-            <p class="project-subtitle">
-              A chatbot for learning about women's legal rights
-            </p>
-
-            <p>
-              A chatbot that helps women find and understand information about
-              their legal rights through conversational questions. Designed
-              with the aim of making legal information easier to access and
-              navigate without having to work through legal documents on your own.
-            </p>
-
-            <p class="tech">
-              Python · LangChain · Llama 2 · Pinecone · React
-            </p>
-
-            <p class="project-link">
-              <a
-                href="https://github.com/angelinaghimire/naritwaa"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                view the project →
-              </a>
-            </p>
-
-          </div>
-
-        </div>
-
-      </article>
-
-
-      <!-- Chhaano -->
-
-      <article class="project">
-
-        <div class="project-content">
-
-          <div class="project-images">
-
-            <img
-              src="images/ch1.png"
-              alt="Chhaano rental search filters"
-            >
-
-            <img
-              src="images/ch2.png"
-              alt="Chhaano rental listings"
-            >
-
-          </div>
-
-          <div class="project-text">
-
-            <h2>Chhaano</h2>
-
-            <p class="project-subtitle">
-              An online room-rental marketplace for Kathmandu University students
-            </p>
-
-            <p>
-              Web based marketplace where students can discover rental listings,
-              filter them by price, location, property type, and amenities,
-              view properties on an interactive map, and contact landlords.
-            </p>
-
-            <p class="tech">
-              React · Django · PostgreSQL · Python · JWT
-            </p>
-
-            <p class="project-link">
-              <a
-                href="https://github.com/angelinaghimire/chaano/tree/main/KURental"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                view the project →
-              </a>
-            </p>
-
-          </div>
-
-        </div>
-
-      </article>
-
-    </section>
-
-
-    <!-- Little Things -->
-
-    <h2 class="section-heading">
-      Little Things
-    </h2>
-
-    <p class="section-intro">
-      Smaller experiments, tools, and things I built because I was curious.
-    </p>
-
-
-    <section class="projects" aria-label="Smaller projects">
-
-      <!-- Neural Networks from Scratch -->
-
-      <article class="project">
-
-        <div class="project-content">
-
-          <div class="project-images">
-            <!-- No image for this project -->
-          </div>
-
-          <div class="project-text">
-
-            <h2>Neural Networks from Scratch</h2>
-
-            <p class="project-subtitle">
-              Building a neural network from the ground up
-            </p>
-
-            <p>
-              A NumPy implementation of a two-layer neural network built from
-              scratch to understand the mechanics behind deep learning. I
-              implemented forward and backpropagation, multiple activation
-              functions and weight initializers, loss functions, and optimizers,
-              then ran a grid of experiments to compare their effects on
-              MNIST classification.
-            </p>
-
-            <p class="tech">
-              Python · NumPy · Jupyter
-            </p>
-
-            <p class="project-link">
-              <a
-                href="https://github.com/angelinaghimire/Neural-Networks-from-Scratch"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                view the project →
-              </a>
-            </p>
-
-          </div>
-
-        </div>
-
-      </article>
-
-    </section>
-
-
-    <!-- Footer -->
-
-    <footer>
-      &copy; 2026 Angelina Ghimire · Hosted on GitHub Pages
-    </footer>
-
-  </main>
-
+<main class="wrap">
+
+<nav aria-label="Main navigation">
+  <a href="index.html">about</a>
+  <a href="projects.html" aria-current="page">projects</a>
+  <a href="research.html">research &amp; writing</a>
+  <a href="personal.html">personal</a>
+</nav>
+
+<header>
+  <h1>Featured</h1>
+  <p class="tagline">technology that keeps people at the center</p>
+</header>
+
+<section class="projects" aria-label="Featured projects">
+
+  <article class="project">
+    <div class="project-content">
+
+      <div class="project-images">
+        <img
+          src="images/hippocampus.png"
+          alt="Hippocampus segmentation from a brain MRI scan"
+        >
+      </div>
+
+      <div class="project-text">
+        <h2>Hippocampus Segmentation</h2>
+
+        <p class="project-subtitle">
+          Segmenting the hippocampus from brain MRI scans
+        </p>
+
+        <p>
+          A medical imaging project exploring automatic hippocampus
+          segmentation from T1-weighted MRI scans using deep learning.
+          Worked with 3D MRI volumes and compared U-Net, Attention U-Net
+          and nn-UNet architectures to learn pixel-level segmentation of
+          the hippocampus.
+        </p>
+
+        <p class="tech">
+          Python · PyTorch · U-Net and variants · 3D MRI
+        </p>
+
+        <p class="project-link">
+          <a
+            href="https://github.com/angelinaghimire/HippocampusSegmentation/blob/main/AttentionUnet_HippocampusSegmentation.ipynb"
+            target="_blank"
+            rel="noopener noreferrer"
+          >view the project →</a>
+        </p>
+      </div>
+
+    </div>
+  </article>
+
+  <article class="project">
+    <div class="project-content">
+
+      <div class="project-images">
+        <img
+          src="images/abhilekh.png"
+          alt="Abhilekh image processing interface for Newari stone inscriptions"
+        >
+      </div>
+
+      <div class="project-text">
+        <h2>Abhilekh</h2>
+
+        <p class="project-subtitle">
+          Image processing for Newari stone inscriptions
+        </p>
+
+        <p>
+          An image-processing system for preserving and studying historical
+          Newari stone inscriptions. Implemented and compared thresholding
+          methods including Sauvola, Otsu, Niblack, and FEAT, along with
+          Fast Fourier Transform-based edge detection, to separate engraved
+          text from the irregular surfaces and shadows of stone.
+        </p>
+
+        <p class="tech">
+          Python · Flutter · Flask · OpenCV · Image Processing
+        </p>
+
+        <p class="project-link">
+          <a
+            href="https://drive.google.com/file/d/1SEFBKQx6RlosrWiKsFvUNGbQQBAFkPAu/view?ths=true"
+            target="_blank"
+            rel="noopener noreferrer"
+          >view the project →</a>
+        </p>
+      </div>
+
+    </div>
+  </article>
+
+  <article class="project">
+    <div class="project-content">
+
+      <div class="project-images">
+        <img
+          src="images/ProcosV.png"
+          alt="Procos V graphical programming environment"
+        >
+      </div>
+
+      <div class="project-text">
+        <h2>Procos V</h2>
+
+        <p class="project-subtitle">
+          A programming language for drawing geometric shapes
+        </p>
+
+        <p>
+          A custom-interpreted language and graphical programming environment
+          that lets users draw and manipulate geometric shapes through code.
+          Equipped with a lexer, parser, interpreter, shape hierarchy,
+          control-flow constructs, and GUI, with support for variables, loops,
+          conditionals, methods, and error handling.
+        </p>
+
+        <p class="tech">
+          C# · .NET · Windows Forms · System.Drawing · MSTest
+        </p>
+      </div>
+
+    </div>
+  </article>
+
+  <article class="project">
+    <div class="project-content">
+
+      <div class="project-images">
+        <img
+          src="images/morphosys.png"
+          alt="MorphoSys grant proposal interface"
+        >
+      </div>
+
+      <div class="project-text">
+        <h2>MorphoSys</h2>
+
+        <p class="project-subtitle">
+          AI-assisted grant proposal development
+        </p>
+
+        <p>
+          An AI-assisted grant proposal system that helps users find relevant
+          funding opportunities, research local context, and build proposals
+          tailored to Nepal.
+        </p>
+
+        <p class="tech">
+          Python · LangChain · LangGraph · MongoDB · OpenAI
+        </p>
+
+        <p class="project-link">
+          <a
+            href="https://github.com/angelinaghimire/morphosys"
+            target="_blank"
+            rel="noopener noreferrer"
+          >view the project →</a>
+        </p>
+      </div>
+
+    </div>
+  </article>
+
+  <article class="project">
+    <div class="project-content">
+
+      <div class="project-images">
+        <img
+          src="images/naritwa.jpg"
+          alt="Naritwa legal rights chatbot"
+        >
+      </div>
+
+      <div class="project-text">
+        <h2>Naritwa</h2>
+
+        <p class="project-subtitle">
+          A chatbot for learning about women's legal rights
+        </p>
+
+        <p>
+          A chatbot that helps women find and understand information about
+          their legal rights through conversational questions. Designed
+          with the aim of making legal information easier to access and
+          navigate without having to work through legal documents on your own.
+        </p>
+
+        <p class="tech">
+          Python · LangChain · Llama 2 · Pinecone · React
+        </p>
+
+        <p class="project-link">
+          <a
+            href="https://github.com/angelinaghimire/naritwaa"
+            target="_blank"
+            rel="noopener noreferrer"
+          >view the project →</a>
+        </p>
+      </div>
+
+    </div>
+  </article>
+
+  <article class="project">
+    <div class="project-content">
+
+      <div class="project-images">
+        <img
+          src="images/ch1.png"
+          alt="Chhaano rental search filters"
+        >
+
+        <img
+          src="images/ch2.png"
+          alt="Chhaano rental listings"
+        >
+      </div>
+
+      <div class="project-text">
+        <h2>Chhaano</h2>
+
+        <p class="project-subtitle">
+          An online room-rental marketplace for Kathmandu University students
+        </p>
+
+        <p>
+          Web based marketplace where students can discover rental listings,
+          filter them by price, location, property type, and amenities,
+          view properties on an interactive map, and contact landlords.
+        </p>
+
+        <p class="tech">
+          React · Django · PostgreSQL · Python · JWT
+        </p>
+
+        <p class="project-link">
+          <a
+            href="https://github.com/angelinaghimire/chaano/tree/main/KURental"
+            target="_blank"
+            rel="noopener noreferrer"
+          >view the project →</a>
+        </p>
+      </div>
+
+    </div>
+  </article>
+
+</section>
+
+<h2 class="section-heading">Little Things</h2>
+
+<p class="section-intro">
+  Smaller experiments, tools, and things I built because I was curious.
+</p>
+
+<section class="projects" aria-label="Smaller projects">
+
+  <article class="project">
+    <div class="project-content">
+
+      <div class="project-images"></div>
+
+      <div class="project-text">
+        <h2>Neural Networks from Scratch</h2>
+
+        <p class="project-subtitle">
+          Building a neural network from the ground up
+        </p>
+
+        <p>
+          A NumPy implementation of a two-layer neural network built from
+          scratch to understand the mechanics behind deep learning. I
+          implemented forward and backpropagation, multiple activation
+          functions and weight initializers, loss functions, and optimizers,
+          then ran a grid of experiments to compare their effects on
+          MNIST classification.
+        </p>
+
+        <p class="tech">
+          Python · NumPy · Jupyter
+        </p>
+
+        <p class="project-link">
+          <a
+            href="https://github.com/angelinaghimire/Neural-Networks-from-Scratch"
+            target="_blank"
+            rel="noopener noreferrer"
+          >view the project →</a>
+        </p>
+      </div>
+
+    </div>
+  </article>
+
+</section>
+
+<footer>
+  &copy; 2026 Angelina Ghimire · Hosted on GitHub Pages
+</footer>
+
+</main>
 </body>
 </html>
