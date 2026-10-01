@@ -59,32 +59,55 @@ padding: 3.5rem 1.5rem 4rem;
 /* Navigation */
 
 nav {
-display: flex;
-flex-wrap: wrap;
-gap: 1.5rem;
-margin-bottom: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--line);
 }
 
-nav a {
-color: var(--ink-soft);
-text-decoration: none;
-font-size: 0.95rem;
-letter-spacing: 0.01em;
-padding-bottom: 3px;
-border-bottom: 1px solid transparent;
-transition:
-color 0.15s ease,
-border-color 0.15s ease;
+.nav-name {
+  flex-shrink: 0;
+  color: var(--ink);
+  font-family: "Fraunces", Georgia, serif;
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
 }
 
-nav a:hover {
-color: var(--ink);
-border-color: var(--line);
+.nav-name:hover {
+  color: var(--accent);
 }
 
-nav a[aria-current="page"] {
-color: var(--ink);
-border-color: var(--accent);
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  color: var(--ink-soft);
+  text-decoration: none;
+  font-size: 0.95rem;
+  letter-spacing: 0.01em;
+  padding-bottom: 3px;
+  border-bottom: 1px solid transparent;
+  transition:
+    color 0.15s ease,
+    border-color 0.15s ease;
+}
+
+.nav-links a:hover {
+  color: var(--ink);
+  border-color: var(--line);
+}
+
+.nav-links a[aria-current="page"] {
+  color: var(--ink);
+  border-color: var(--accent);
 }
 
 /* Introduction */
@@ -237,10 +260,13 @@ font-size: 2.1rem;
 <main class="wrap">
 
 <nav aria-label="Main navigation">
-<a href="index.html" aria-current="page">about</a>
-<a href="projects.html">projects</a>
-<a href="research.html">research &amp; writing</a>
-<a href="personal.html">personal</a>
+
+  <div class="nav-links">
+    <a href="index.html">about</a>
+    <a href="projects.html" aria-current="page">projects</a>
+    <a href="research.html">research &amp; writing</a>
+    <a href="personal.html">personal</a>
+  </div>
 </nav>
 
 <header>
