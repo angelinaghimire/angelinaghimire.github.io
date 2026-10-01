@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -408,4 +408,622 @@
 
 </main>
 </body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Angelina Ghimire</title>
+
+  <meta
+    name="description"
+    content="Angelina Ghimire — technology that keeps people at the center."
+  >
+
+  <link rel="icon" href="data:,">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Public+Sans:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+    :root {
+      --paper: #faf9f5;
+      --paper-dark: #f2f0e9;
+      --ink: #1c1f1d;
+      --ink-soft: #555952;
+      --accent: #2f5d50;
+      --accent-light: #dfe8e2;
+      --line: #dedad0;
+      --muted: #8f8b7f;
+
+      --max-width: 1120px;
+      --reading-width: 680px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: "Public Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* --------------------------------
+       Layout
+    -------------------------------- */
+
+    .wrap {
+      width: min(calc(100% - 64px), var(--max-width));
+      margin: 0 auto;
+      padding: 2.75rem 0 4rem;
+    }
+
+    /* --------------------------------
+       Navigation
+    -------------------------------- */
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      margin-bottom: 6rem;
+    }
+
+    nav a {
+      color: var(--ink-soft);
+      text-decoration: none;
+      font-size: 0.9rem;
+      letter-spacing: 0.01em;
+      padding-bottom: 4px;
+      border-bottom: 1px solid transparent;
+      transition:
+        color 0.2s ease,
+        border-color 0.2s ease;
+    }
+
+    nav a:hover {
+      color: var(--ink);
+      border-color: var(--line);
+    }
+
+    nav a[aria-current="page"] {
+      color: var(--ink);
+      border-color: var(--accent);
+    }
+
+    /* --------------------------------
+       Hero
+    -------------------------------- */
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
+      gap: 5rem;
+      align-items: end;
+      padding-bottom: 6rem;
+      border-bottom: 1px solid var(--line);
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: "Fraunces", Georgia, serif;
+      font-weight: 500;
+    }
+
+    h1 {
+      margin: 0 0 0.75rem;
+      font-size: clamp(3rem, 6vw, 5.25rem);
+      line-height: 0.98;
+      letter-spacing: -0.035em;
+    }
+
+    .tagline {
+      margin: 0;
+      color: var(--accent);
+      font-family: "Fraunces", Georgia, serif;
+      font-size: 1.3rem;
+      font-style: italic;
+      line-height: 1.4;
+    }
+
+    .intro {
+      max-width: var(--reading-width);
+    }
+
+    .intro p {
+      margin: 0 0 1.25rem;
+      color: var(--ink-soft);
+      font-size: 1.02rem;
+      line-height: 1.8;
+    }
+
+    .intro p:last-child {
+      margin-bottom: 0;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration-color: rgba(47, 93, 80, 0.35);
+      text-underline-offset: 3px;
+      transition: text-decoration-color 0.2s ease;
+    }
+
+    a:hover {
+      text-decoration-color: var(--accent);
+    }
+
+    /* --------------------------------
+       Highlights
+    -------------------------------- */
+
+    .highlights {
+      padding-top: 5.5rem;
+    }
+
+    .section-heading {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 2rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .section-heading h2 {
+      margin: 0;
+      font-size: 2rem;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+    }
+
+    .section-heading span {
+      color: var(--muted);
+      font-size: 0.82rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .highlight {
+      display: grid;
+      grid-template-columns: 300px minmax(0, 1fr);
+      gap: 3rem;
+      padding: 2.75rem 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .highlight:first-of-type {
+      border-top: none;
+      padding-top: 0;
+    }
+
+    .h-photo {
+      margin: 0;
+    }
+
+    .h-photo img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      background: var(--paper-dark);
+      border: 1px solid var(--line);
+      border-radius: 4px;
+      transition: transform 0.3s ease;
+    }
+
+    .highlight:hover .h-photo img {
+      transform: translateY(-3px);
+    }
+
+    .h-body {
+      align-self: center;
+      max-width: 650px;
+    }
+
+    .highlight h3 {
+      margin: 0 0 0.4rem;
+      font-size: 1.65rem;
+      line-height: 1.25;
+      letter-spacing: -0.015em;
+    }
+
+    .h-meta {
+      margin: 0 0 1.1rem;
+      color: var(--accent);
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .highlight p {
+      margin: 0 0 1rem;
+      max-width: 62ch;
+      color: var(--ink-soft);
+      font-size: 0.96rem;
+      line-height: 1.75;
+    }
+
+    .highlight p:last-child {
+      margin-bottom: 0;
+    }
+
+    .h-link {
+      margin-top: 1.25rem !important;
+    }
+
+    /* --------------------------------
+       Footer
+    -------------------------------- */
+
+    footer {
+      display: flex;
+      justify-content: space-between;
+      gap: 2rem;
+      margin-top: 5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 0.8rem;
+    }
+
+    /* --------------------------------
+       Responsive
+    -------------------------------- */
+
+    @media (max-width: 800px) {
+      .wrap {
+        width: min(calc(100% - 40px), 680px);
+      }
+
+      nav {
+        margin-bottom: 4rem;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding-bottom: 4rem;
+      }
+
+      h1 {
+        font-size: clamp(3rem, 12vw, 4.5rem);
+      }
+
+      .intro {
+        max-width: 680px;
+      }
+
+      .highlights {
+        padding-top: 4rem;
+      }
+
+      .highlight {
+        grid-template-columns: 220px minmax(0, 1fr);
+        gap: 2rem;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .wrap {
+        width: calc(100% - 32px);
+        padding-top: 1.75rem;
+      }
+
+      nav {
+        gap: 1.15rem;
+        margin-bottom: 3.5rem;
+      }
+
+      nav a {
+        font-size: 0.84rem;
+      }
+
+      .hero {
+        padding-bottom: 3.5rem;
+      }
+
+      h1 {
+        font-size: 3.2rem;
+      }
+
+      .tagline {
+        font-size: 1.15rem;
+      }
+
+      .intro p {
+        font-size: 0.98rem;
+      }
+
+      .section-heading {
+        margin-bottom: 2rem;
+      }
+
+      .highlight {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 2.25rem 0;
+      }
+
+      .h-photo img {
+        max-width: 420px;
+      }
+
+      .h-body {
+        max-width: none;
+      }
+
+      .highlight h3 {
+        font-size: 1.45rem;
+      }
+
+      footer {
+        flex-direction: column;
+        gap: 0.25rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="wrap">
+
+    <nav aria-label="Main navigation">
+      <a href="index.html" aria-current="page">about</a>
+      <a href="projects.html">projects</a>
+      <a href="research.html">research &amp; writing</a>
+      <a href="personal.html">personal</a>
+    </nav>
+
+
+    <!-- HERO -->
+
+    <header class="hero">
+
+      <div>
+        <h1>Angelina<br>Ghimire</h1>
+        <p class="tagline">
+          technology that keeps people at the center
+        </p>
+      </div>
+
+      <div class="intro">
+
+        <p>
+          Hi there. I'm fascinated by machines, minds, and ethics, and how
+          we can use what we learn about them to build technology that
+          actually helps people. I studied Computer Science at Kathmandu
+          University, where I explored a little bit of everything from
+          algorithms, theory, and statistics to neural networks,
+          human-computer interaction, and information systems ethics.
+        </p>
+
+        <p>
+          I became especially curious about intelligent systems: how they learn,
+          how they reason, how they interact with us, and what it means to build
+          things that are becoming increasingly intelligent. I'm still figuring
+          out where these questions will take me, but I'd like to spend my career
+          exploring them, and hopefully make the world a little better along the way.
+          If you have any ideas,
+          <a href="mailto:angelinaghimire.cs@gmail.com">reach out</a>.
+        </p>
+
+      </div>
+
+    </header>
+
+
+    <!-- HIGHLIGHTS -->
+
+    <section class="highlights" aria-labelledby="highlights-title">
+
+      <div class="section-heading">
+        <h2 id="highlights-title">Highlights</h2>
+        <span>a few things I've done</span>
+      </div>
+
+
+      <article class="highlight">
+
+        <figure class="h-photo">
+          <img
+            src="images/bootcamp.png"
+            alt="Angelina teaching at an AI bootcamp"
+          >
+        </figure>
+
+        <div class="h-body">
+
+          <h3>Learning to Teach</h3>
+
+          <p class="h-meta">
+            Nepal AI School &amp; AI-Assisted Disease Screening Bootcamp
+          </p>
+
+          <p>
+            I've recently taught from both sides of the classroom: as a
+            teaching assistant supporting Prof. Michael Bronstein's team in
+            geometric deep learning, and as an organizer and trainer for a
+            five-week bootcamp where 30 participants learned to apply AI
+            to clinical disease screening.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <article class="highlight">
+
+        <figure class="h-photo">
+          <img
+            src="images/seeds.jpeg"
+            alt="Angelina presenting her team's project at Huawei Seeds for the Future in Shenzhen"
+          >
+        </figure>
+
+        <div class="h-body">
+
+          <h3>Finding My Voice</h3>
+
+          <p class="h-meta">
+            Huawei Seeds for the Future
+          </p>
+
+          <p>
+            I was selected to represent Nepal at the Tech4Good competition
+            in China, where my team built and pitched an AI-based ultrasound
+            solution. Pitching in front of hundreds of people was one of my
+            proudest moments, and we ended up walking away with the People's
+            Choice Award.
+          </p>
+
+          <p class="h-link">
+            I talk more about it
+            <a
+              href="https://www.technologykhabar.com/2025/11/19/221276/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >here</a> →
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <article class="highlight">
+
+        <figure class="h-photo">
+          <img
+            src="images/wlitgrad.jpeg"
+            alt="Angelina with her Women Leaders in Technology cohort"
+          >
+        </figure>
+
+        <div class="h-body">
+
+          <h3>Turns Out, Girls Can Do Tech</h3>
+
+          <p class="h-meta">
+            Women Leaders in Technology
+          </p>
+
+          <p>
+            I spent nine months as part of a 15-woman cohort, working through
+            an intensive JavaScript, Node.js, and MongoDB bootcamp taught
+            entirely by women, alongside leadership sessions on design
+            thinking and problem-solving. I was also mentored one-on-one by
+            <a
+              href="https://www.linkedin.com/in/noragurung/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >Nora Asha Gurung</a>.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <article class="highlight">
+
+        <figure class="h-photo">
+          <img
+            src="images/aischool.jpg"
+            alt="Angelina with her team at the Nepal AI School Hackathon"
+          >
+        </figure>
+
+        <div class="h-body">
+
+          <h3>Building to Win</h3>
+
+          <p class="h-meta">
+            Nepal AI School Hackathon
+          </p>
+
+          <p>
+            My team took first place in the Startup Track, designing and
+            pitching a RAG-based grant document generator to a panel of
+            researchers and industry experts.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <article class="highlight">
+
+        <figure class="h-photo">
+          <img
+            src="images/kucc.jpeg"
+            alt="Angelina at a Kathmandu University Computer Club event"
+          >
+        </figure>
+
+        <div class="h-body">
+
+          <h3>Finding Community</h3>
+
+          <p class="h-meta">
+            Kathmandu University Computer Club
+          </p>
+
+          <p>
+            I served first as an Executive Member and later as Vice President
+            of KUCC, Kathmandu University's departmental computer club. I
+            co-led flagship events including KU IT Meet and KU Hackfest and
+            organized workshops on emerging technologies.
+          </p>
+
+          <p>
+            I was also Editor-in-Chief of
+            <a
+              href="https://kucc.ku.edu.np/docs/IT-EXPRESS-2023.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            ><em>IT Express</em></a>,
+            where I led a 15-member editorial team through content strategy,
+            editing, and design to publish 300+ copies reaching more than
+            1,500 readers.
+          </p>
+
+        </div>
+
+      </article>
+
+    </section>
+
+
+    <footer>
+      <span>&copy; 2026 Angelina Ghimire</span>
+      <span>Hosted on GitHub Pages</span>
+    </footer>
+
+  </main>
+
+</body>
 </html>
+
+
