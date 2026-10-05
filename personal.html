@@ -200,6 +200,19 @@ a:hover {
     2px 2px 4px rgba(28, 31, 29, 0.12),
     inset 3px 0 0 rgba(255, 255, 255, 0.15),
     inset -3px 0 0 rgba(0, 0, 0, 0.06);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.book-spine:hover {
+  transform: translateY(-8px) rotate(1deg);
+  box-shadow:
+    4px 8px 12px rgba(28, 31, 29, 0.16),
+    inset 3px 0 0 rgba(255, 255, 255, 0.15),
+    inset -3px 0 0 rgba(0, 0, 0, 0.06);
+  z-index: 5;
 }
 
 .book-spine span {
@@ -344,8 +357,7 @@ a:hover {
   background: #f1eee5;
   border: 1px solid #ded8ca;
 
-  box-shadow:
-    2px 3px 7px rgba(28, 31, 29, 0.08);
+  box-shadow: 2px 3px 7px rgba(28, 31, 29, 0.08);
 
   transition:
     transform 0.2s ease,
@@ -354,20 +366,15 @@ a:hover {
 
 .watch-card:hover {
   color: var(--ink);
-
   transform: translateY(-5px) rotate(0deg);
-
-  box-shadow:
-    3px 7px 14px rgba(28, 31, 29, 0.12);
+  box-shadow: 3px 7px 14px rgba(28, 31, 29, 0.12);
 }
 
 .watch-type {
   display: block;
-
   margin-bottom: 1.5rem;
 
   color: var(--muted);
-
   font-family: "Public Sans", sans-serif;
   font-size: 0.62rem;
   font-weight: 600;
@@ -387,19 +394,8 @@ a:hover {
   margin: 0.45rem 0 0;
 
   color: var(--ink-soft);
-
   font-size: 0.82rem;
   line-height: 1.4;
-}
-
-.watch-link {
-  margin-top: auto;
-  padding-top: 1.25rem;
-
-  color: var(--accent);
-
-  font-size: 0.72rem;
-  letter-spacing: 0.02em;
 }
 
 /* Card arrangement */
@@ -432,6 +428,18 @@ a:hover {
   grid-column: 4 / span 2;
   transform: rotate(-0.8deg);
   background: #e5ebe6;
+}
+
+.card-6 {
+  grid-column: 2 / span 2;
+  transform: rotate(-0.7deg);
+  background: #e9e4d8;
+}
+
+.card-7 {
+  grid-column: 4 / span 2;
+  transform: rotate(0.8deg);
+  background: #e5e9e6;
 }
 
 /* =========================
@@ -484,16 +492,30 @@ footer {
   .card-2,
   .card-3,
   .card-4,
-  .card-5 {
+  .card-5,
+  .card-6,
+  .card-7 {
     grid-column: span 1;
   }
+}
 
-  .card-4 {
-    grid-column: 1;
+@media (max-width: 480px) {
+
+  .watch-cards {
+    grid-template-columns: 1fr;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
   }
 
-  .card-5 {
-    grid-column: 2;
+  .watch-card,
+  .card-1,
+  .card-2,
+  .card-3,
+  .card-4,
+  .card-5,
+  .card-6,
+  .card-7 {
+    grid-column: span 1;
   }
 }
 
@@ -684,88 +706,71 @@ footer {
 
   <section class="watchlist" aria-labelledby="watchlist-title">
 
-    <h2 id="watchlist-title">Things to Watch</h2>
+  <h2 id="watchlist-title">Things to Watch</h2>
 
-    <div class="watch-cards">
+  <div class="watch-cards">
 
-      <a
-        class="watch-card card-1"
-        href="https://archive.org/details/WaysofSeeing"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <span class="watch-type">DOCUMENTARY</span>
-
-        <h3>Ways of Seeing</h3>
-
-        <p>John Berger</p>
-
-        <span class="watch-link">↗ watch</span>
-      </a>
+    <a
+      class="watch-card card-1"
+      href="https://archive.org/details/WaysofSeeing"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <span class="watch-type">DOCUMENTARY</span>
+      <h3>Ways of Seeing</h3>
+      <p>John Berger</p>
+    </a>
 
 
-      <div class="watch-card card-2">
-
-        <span class="watch-type">SERIES</span>
-
-        <h3>Cosmos</h3>
-
-        <p>Carl Sagan</p>
-
-        <span class="watch-link">to watch</span>
-
-      </div>
-
-
-      <a
-        class="watch-card card-3"
-        href="https://archive.org/details/ConnectionsByJamesBurke/Connections/Season+1/Connections+S01E01+-+The+Trigger+Effect.mp4"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-
-        <span class="watch-type">SERIES</span>
-
-        <h3>Connections</h3>
-
-        <p>James Burke</p>
-
-        <span class="watch-link">↗ watch</span>
-
-      </a>
-
-
-      <div class="watch-card card-4">
-
-        <span class="watch-type">SERIES</span>
-
-        <h3>
-          Abstract:<br>
-          The Art of Design
-        </h3>
-
-        <p>Netflix</p>
-
-        <span class="watch-link">to watch</span>
-
-      </div>
-
-
-      <div class="watch-card card-5">
-
-        <span class="watch-type">LECTURE</span>
-
-        <h3>The Pleasure of Finding Things Out</h3>
-
-        <p>Richard Feynman</p>
-
-        <span class="watch-link">to watch</span>
-
-      </div>
-
+    <div class="watch-card card-2">
+      <span class="watch-type">SERIES</span>
+      <h3>Cosmos</h3>
+      <p>Carl Sagan</p>
     </div>
 
-  </section>
+
+    <a
+      class="watch-card card-3"
+      href="https://archive.org/details/ConnectionsByJamesBurke/Connections/Season+1/Connections+S01E01+-+The+Trigger+Effect.mp4"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <span class="watch-type">SERIES</span>
+      <h3>Connections</h3>
+      <p>James Burke</p>
+    </a>
+
+
+    <div class="watch-card card-4">
+      <span class="watch-type">SERIES</span>
+      <h3>Abstract:<br>The Art of Design</h3>
+      <p>Netflix</p>
+    </div>
+
+
+    <div class="watch-card card-5">
+      <span class="watch-type">DOCUMENTARY</span>
+      <h3>The Pleasure of Finding Things Out</h3>
+      <p>Richard Feynman</p>
+    </div>
+
+
+    <div class="watch-card card-6">
+      <span class="watch-type">FILM</span>
+      <h3>2001: A Space Odyssey</h3>
+      <p>Stanley Kubrick</p>
+    </div>
+
+
+    <div class="watch-card card-7">
+      <span class="watch-type">FILM</span>
+      <h3>Dead Poets Society</h3>
+      <p>Peter Weir</p>
+    </div>
+
+  </div>
+
+</section>
 
 
   <footer>
