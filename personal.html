@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <link
   href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Noto+Serif+Devanagari:wght@400;500&family=Public+Sans:wght@400;500;600&display=swap"
-  rel="stylesheet">
+  rel="stylesheet"
+>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -19,12 +22,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link
-  href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Public+Sans:wght@400;500;600&display=swap"
-  rel="stylesheet"
->
-
 <style>
+
 :root {
   --paper: #faf9f5;
   --ink: #1c1f1d;
@@ -146,7 +145,9 @@ a:hover {
   margin-bottom: 0;
 }
 
-/* Book Shelf */
+/* =========================
+   BOOK SHELF
+   ========================= */
 
 .highlights {
   margin-top: 3rem;
@@ -161,8 +162,6 @@ a:hover {
   font-weight: 500;
   letter-spacing: -0.01em;
 }
-
-/* Shelf */
 
 .bookshelf {
   position: relative;
@@ -256,7 +255,8 @@ a:hover {
   width: 50px;
   background: #c2c8b4;
 }
-  .book-8 {
+
+.book-8 {
   height: 188px;
   width: 48px;
   background: #b7a7b9;
@@ -304,61 +304,9 @@ a:hover {
   color: var(--ink);
 }
 
-/* Footer */
-
-footer {
-  margin-top: 3rem;
-  color: var(--muted);
-  font-size: 0.85rem;
-}
-
-/* Responsive */
-
-@media (max-width: 700px) {
-
-  .book-list {
-    grid-template-columns: 1fr;
-    gap: 0;
-  }
-
-  .book-list li {
-    padding: 0.7rem 0;
-  }
-
-  .books {
-    gap: 0.3rem;
-    padding-left: 0;
-    padding-right: 0;
-  }
-
-  .book-spine {
-    width: 42px;
-  }
-
-  .book-spine span {
-    font-size: 0.72rem;
-  }
-}
-
-@media (max-width: 480px) {
-
-  .wrap {
-    padding-top: 2.5rem;
-  }
-
-  h1 {
-    font-size: 2.1rem;
-  }
-
-  .book-spine:nth-child(2),
-  .book-spine:nth-child(5) {
-    display: none;
-  }
-
-  .book-spine {
-    width: 43px;
-  }
-  /* Things to Watch */
+/* =========================
+   THINGS TO WATCH
+   ========================= */
 
 .watchlist {
   margin-top: 3rem;
@@ -383,6 +331,7 @@ footer {
 
 .watch-card {
   position: relative;
+
   display: flex;
   flex-direction: column;
 
@@ -405,16 +354,20 @@ footer {
 
 .watch-card:hover {
   color: var(--ink);
+
   transform: translateY(-5px) rotate(0deg);
+
   box-shadow:
     3px 7px 14px rgba(28, 31, 29, 0.12);
 }
 
 .watch-type {
   display: block;
+
   margin-bottom: 1.5rem;
 
   color: var(--muted);
+
   font-family: "Public Sans", sans-serif;
   font-size: 0.62rem;
   font-weight: 600;
@@ -434,6 +387,7 @@ footer {
   margin: 0.45rem 0 0;
 
   color: var(--ink-soft);
+
   font-size: 0.82rem;
   line-height: 1.4;
 }
@@ -443,6 +397,7 @@ footer {
   padding-top: 1.25rem;
 
   color: var(--accent);
+
   font-size: 0.72rem;
   letter-spacing: 0.02em;
 }
@@ -479,9 +434,46 @@ footer {
   background: #e5ebe6;
 }
 
-/* Responsive */
+/* =========================
+   FOOTER
+   ========================= */
+
+footer {
+  margin-top: 3rem;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
 
 @media (max-width: 700px) {
+
+  .book-list {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .book-list li {
+    padding: 0.7rem 0;
+  }
+
+  .books {
+    gap: 0.3rem;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .book-spine {
+    width: 42px;
+  }
+
+  .book-spine span {
+    font-size: 0.72rem;
+  }
+
+  /* Watch cards */
 
   .watch-cards {
     grid-template-columns: repeat(2, 1fr);
@@ -507,6 +499,25 @@ footer {
 
 @media (max-width: 480px) {
 
+  .wrap {
+    padding-top: 2.5rem;
+  }
+
+  h1 {
+    font-size: 2.1rem;
+  }
+
+  .book-spine:nth-child(2),
+  .book-spine:nth-child(5) {
+    display: none;
+  }
+
+  .book-spine {
+    width: 43px;
+  }
+
+  /* Watch cards */
+
   .watch-cards {
     grid-template-columns: 1fr;
     padding-left: 0.5rem;
@@ -522,7 +533,7 @@ footer {
     grid-column: span 1;
   }
 }
-  
+
 </style>
 </head>
 
@@ -546,179 +557,216 @@ footer {
     </p>
 
     <ul class="personal-list">
-      <li>books that make me think, bookstores, and libraries</li>
-      <li>matcha, cute coffee shops, and cafe hopping</li>
-      <li>baking desserts, but mostly eating them</li>
-      <li>long walks at sunset with absolutely nowhere to be</li>
-      <li>true crime documentaries and the deep-dive rabbit holes that follow</li>
-      <li>yoga, spirituality, psychology, and intellectualizing the human experience</li>
-      <li>poetry, the stillness of waking up at 5am, and the smell of incense</li>
+      <li>reading until 2am and regretting it the next morning, every time</li>
+      <li>matcha lattes, oversized sweaters, and bookstores I never want to leave</li>
+      <li>baking elaborate desserts and eating most of the batter before they’re even in the oven</li>
+      <li>true crime documentaries, usually with the lights off and rarely a good idea before bed</li>
+      <li>getting carried away in conversations about philosophy, psychology, and why people are the way they are</li>
+      <li>yoga some mornings, skipping it on others, and feeling vaguely guilty either way</li>
+      <li>stargazing whenever I remember to look up and wonder what’s happening up there</li>
     </ul>
+
 
   </header>
 
- <section class="highlights" aria-labelledby="highlights-title">
 
-  <h2 id="highlights-title">Book Shelf Recommendations</h2>
+  <!-- BOOKS -->
 
-  <div class="bookshelf">
+  <section class="highlights" aria-labelledby="highlights-title">
 
-    <div class="books">
+    <h2 id="highlights-title">Book Shelf Recommendations</h2>
 
-      <div class="book-spine book-1">
-        <span>Gödel, Escher, Bach</span>
+    <div class="bookshelf">
+
+      <div class="books">
+
+        <div class="book-spine book-1">
+          <span>Gödel, Escher, Bach</span>
+        </div>
+
+        <div class="book-spine book-2">
+          <span>How to Create a Mind</span>
+        </div>
+
+        <div class="book-spine book-3">
+          <span>Intuition Pumps and Other Tools for Thinking</span>
+        </div>
+
+        <div class="book-spine book-4">
+          <span>The Ancient Secret of the Flower of Life</span>
+        </div>
+
+        <div class="book-spine book-5">
+          <span>The Unbearable Lightness of Being</span>
+        </div>
+
+        <div class="book-spine book-6">
+          <span>Orbital</span>
+        </div>
+
+        <div class="book-spine book-7">
+          <span>The Little Prince</span>
+        </div>
+
+        <div class="book-spine book-8">
+          <span>शिरीषको फूल</span>
+        </div>
+
       </div>
 
-      <div class="book-spine book-2">
-        <span>How to Create a Mind</span>
-      </div>
 
-      <div class="book-spine book-3">
-        <span>Intuition Pumps and Other Tools for Thinking</span>
-      </div>
+      <ol class="book-list">
 
-      <div class="book-spine book-4">
-        <span>The Ancient Secret of the Flower of Life</span>
-      </div>
+        <li>
+          <span class="book-number">01</span>
+          <span class="book-title">
+            Gödel, Escher, Bach — Douglas Hofstadter
+          </span>
+        </li>
 
-      <div class="book-spine book-5">
-        <span>The Unbearable Lightness of Being</span>
-      </div>
+        <li>
+          <span class="book-number">02</span>
+          <span class="book-title">
+            How to Create a Mind — Ray Kurzweil
+          </span>
+        </li>
 
-      <div class="book-spine book-6">
-        <span>Orbital</span>
-      </div>
+        <li>
+          <span class="book-number">03</span>
+          <span class="book-title">
+            Intuition Pumps and Other Tools for Thinking — Daniel C. Dennett
+          </span>
+        </li>
 
-      <div class="book-spine book-7">
-        <span>The Little Prince</span>
-      </div>
+        <li>
+          <span class="book-number">04</span>
+          <span class="book-title">
+            The Ancient Secret of the Flower of Life — Drunvalo Melchizedek
+          </span>
+        </li>
 
-      <div class="book-spine book-8">
-        <span>शिरीषको फूल</span>
-      </div>
+        <li>
+          <span class="book-number">05</span>
+          <span class="book-title">
+            The Unbearable Lightness of Being — Milan Kundera
+          </span>
+        </li>
+
+        <li>
+          <span class="book-number">06</span>
+          <span class="book-title">
+            Orbital — Samantha Harvey
+          </span>
+        </li>
+
+        <li>
+          <span class="book-number">07</span>
+          <span class="book-title">
+            The Little Prince — Antoine de Saint-Exupéry
+          </span>
+        </li>
+
+        <li>
+          <span class="book-number">08</span>
+          <span class="book-title">
+            शिरीषको फूल — पारिजात
+          </span>
+        </li>
+
+      </ol>
 
     </div>
 
-    <ol class="book-list">
-
-      <li>
-        <span class="book-number">01</span>
-        <span class="book-title">
-          Gödel, Escher, Bach — Douglas Hofstadter
-        </span>
-      </li>
-
-      <li>
-        <span class="book-number">02</span>
-        <span class="book-title">
-          How to Create a Mind — Ray Kurzweil
-        </span>
-      </li>
-
-      <li>
-        <span class="book-number">03</span>
-        <span class="book-title">
-          Intuition Pumps and Other Tools for Thinking — Daniel C. Dennett
-        </span>
-      </li>
-
-      <li>
-        <span class="book-number">04</span>
-        <span class="book-title">
-          The Ancient Secret of the Flower of Life — Drunvalo Melchizedek
-        </span>
-      </li>
-
-      <li>
-        <span class="book-number">05</span>
-        <span class="book-title">
-          The Unbearable Lightness of Being — Milan Kundera
-        </span>
-      </li>
-
-      <li>
-        <span class="book-number">06</span>
-        <span class="book-title">
-          Orbital — Samantha Harvey
-        </span>
-      </li>
-
-      <li>
-        <span class="book-number">07</span>
-        <span class="book-title">
-          The Little Prince — Antoine de Saint-Exupéry
-        </span>
-      </li>
-
-       <li>
-        <span class="book-number">08</span>
-        <span class="book-title">
-          Sirish ko Phool — Parijat
-        </span>
-      </li>
+  </section>
 
 
-    </ol>
-
-  </div>
-
-</section>
+  <!-- THINGS TO WATCH -->
 
   <section class="watchlist" aria-labelledby="watchlist-title">
 
-  <h2 id="watchlist-title">Things to Watch</h2>
+    <h2 id="watchlist-title">Things to Watch</h2>
 
-  <div class="watch-cards">
+    <div class="watch-cards">
 
-    <a
-      class="watch-card card-1"
-      href="https://archive.org/details/WaysofSeeing"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <span class="watch-type">DOCUMENTARY</span>
-      <h3>Ways of Seeing</h3>
-      <p>John Berger</p>
-      <span class="watch-link">↗ watch</span>
-    </a>
+      <a
+        class="watch-card card-1"
+        href="https://archive.org/details/WaysofSeeing"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <span class="watch-type">DOCUMENTARY</span>
 
-    <div class="watch-card card-2">
-      <span class="watch-type">SERIES</span>
-      <h3>Cosmos</h3>
-      <p>Carl Sagan</p>
-      <span class="watch-link">to watch</span>
+        <h3>Ways of Seeing</h3>
+
+        <p>John Berger</p>
+
+        <span class="watch-link">↗ watch</span>
+      </a>
+
+
+      <div class="watch-card card-2">
+
+        <span class="watch-type">SERIES</span>
+
+        <h3>Cosmos</h3>
+
+        <p>Carl Sagan</p>
+
+        <span class="watch-link">to watch</span>
+
+      </div>
+
+
+      <a
+        class="watch-card card-3"
+        href="https://archive.org/details/ConnectionsByJamesBurke/Connections/Season+1/Connections+S01E01+-+The+Trigger+Effect.mp4"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+
+        <span class="watch-type">SERIES</span>
+
+        <h3>Connections</h3>
+
+        <p>James Burke</p>
+
+        <span class="watch-link">↗ watch</span>
+
+      </a>
+
+
+      <div class="watch-card card-4">
+
+        <span class="watch-type">SERIES</span>
+
+        <h3>
+          Abstract:<br>
+          The Art of Design
+        </h3>
+
+        <p>Netflix</p>
+
+        <span class="watch-link">to watch</span>
+
+      </div>
+
+
+      <div class="watch-card card-5">
+
+        <span class="watch-type">LECTURE</span>
+
+        <h3>The Pleasure of Finding Things Out</h3>
+
+        <p>Richard Feynman</p>
+
+        <span class="watch-link">to watch</span>
+
+      </div>
+
     </div>
 
-    <a
-      class="watch-card card-3"
-      href="https://archive.org/details/ConnectionsByJamesBurke/Connections/Season+1/Connections+S01E01+-+The+Trigger+Effect.mp4"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <span class="watch-type">SERIES</span>
-      <h3>Connections</h3>
-      <p>James Burke</p>
-      <span class="watch-link">↗ watch</span>
-    </a>
+  </section>
 
-    <div class="watch-card card-4">
-      <span class="watch-type">SERIES</span>
-      <h3>Abstract:<br>The Art of Design</h3>
-      <p>Netflix</p>
-      <span class="watch-link">to watch</span>
-    </div>
-
-    <div class="watch-card card-5">
-      <span class="watch-type">LECTURE</span>
-      <h3>The Pleasure of Finding Things Out</h3>
-      <p>Richard Feynman</p>
-      <span class="watch-link">to watch</span>
-    </div>
-
-  </div>
-
-</section>
-  
 
   <footer>
     &copy; 2026 Angelina Ghimire · Hosted on GitHub Pages
