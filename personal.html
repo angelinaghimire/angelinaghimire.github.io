@@ -358,7 +358,171 @@ footer {
   .book-spine {
     width: 43px;
   }
+  /* Things to Watch */
+
+.watchlist {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--line);
 }
+
+.watchlist h2 {
+  margin: 0 0 1.75rem;
+  font-size: 1.6rem;
+  line-height: 1.2;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+
+.watch-cards {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1.25rem;
+  padding: 0.75rem 0.25rem 1.5rem;
+}
+
+.watch-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  min-height: 190px;
+  padding: 1.25rem 1.15rem 1rem;
+
+  color: var(--ink);
+  text-decoration: none;
+
+  background: #f1eee5;
+  border: 1px solid #ded8ca;
+
+  box-shadow:
+    2px 3px 7px rgba(28, 31, 29, 0.08);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.watch-card:hover {
+  color: var(--ink);
+  transform: translateY(-5px) rotate(0deg);
+  box-shadow:
+    3px 7px 14px rgba(28, 31, 29, 0.12);
+}
+
+.watch-type {
+  display: block;
+  margin-bottom: 1.5rem;
+
+  color: var(--muted);
+  font-family: "Public Sans", sans-serif;
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+}
+
+.watch-card h3 {
+  margin: 0;
+
+  font-family: "Fraunces", Georgia, serif;
+  font-size: 1.25rem;
+  line-height: 1.15;
+  font-weight: 500;
+}
+
+.watch-card p {
+  margin: 0.45rem 0 0;
+
+  color: var(--ink-soft);
+  font-size: 0.82rem;
+  line-height: 1.4;
+}
+
+.watch-link {
+  margin-top: auto;
+  padding-top: 1.25rem;
+
+  color: var(--accent);
+  font-size: 0.72rem;
+  letter-spacing: 0.02em;
+}
+
+/* Card arrangement */
+
+.card-1 {
+  grid-column: span 2;
+  transform: rotate(-1.2deg);
+  background: #eee9dc;
+}
+
+.card-2 {
+  grid-column: span 2;
+  transform: rotate(0.8deg);
+  background: #e8ede5;
+}
+
+.card-3 {
+  grid-column: span 2;
+  transform: rotate(-0.5deg);
+  background: #eee5e0;
+}
+
+.card-4 {
+  grid-column: 2 / span 2;
+  transform: rotate(0.9deg);
+  background: #e9e5dc;
+}
+
+.card-5 {
+  grid-column: 4 / span 2;
+  transform: rotate(-0.8deg);
+  background: #e5ebe6;
+}
+
+/* Responsive */
+
+@media (max-width: 700px) {
+
+  .watch-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .watch-card,
+  .card-1,
+  .card-2,
+  .card-3,
+  .card-4,
+  .card-5 {
+    grid-column: span 1;
+  }
+
+  .card-4 {
+    grid-column: 1;
+  }
+
+  .card-5 {
+    grid-column: 2;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .watch-cards {
+    grid-template-columns: 1fr;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
+  .watch-card,
+  .card-1,
+  .card-2,
+  .card-3,
+  .card-4,
+  .card-5 {
+    grid-column: span 1;
+  }
+}
+  
 </style>
 </head>
 
@@ -499,6 +663,62 @@ footer {
   </div>
 
 </section>
+
+  <section class="watchlist" aria-labelledby="watchlist-title">
+
+  <h2 id="watchlist-title">Things to Watch</h2>
+
+  <div class="watch-cards">
+
+    <a
+      class="watch-card card-1"
+      href="https://archive.org/details/WaysofSeeing"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <span class="watch-type">DOCUMENTARY</span>
+      <h3>Ways of Seeing</h3>
+      <p>John Berger</p>
+      <span class="watch-link">↗ watch</span>
+    </a>
+
+    <div class="watch-card card-2">
+      <span class="watch-type">SERIES</span>
+      <h3>Cosmos</h3>
+      <p>Carl Sagan</p>
+      <span class="watch-link">to watch</span>
+    </div>
+
+    <a
+      class="watch-card card-3"
+      href="https://archive.org/details/ConnectionsByJamesBurke/Connections/Season+1/Connections+S01E01+-+The+Trigger+Effect.mp4"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <span class="watch-type">SERIES</span>
+      <h3>Connections</h3>
+      <p>James Burke</p>
+      <span class="watch-link">↗ watch</span>
+    </a>
+
+    <div class="watch-card card-4">
+      <span class="watch-type">SERIES</span>
+      <h3>Abstract:<br>The Art of Design</h3>
+      <p>Netflix</p>
+      <span class="watch-link">to watch</span>
+    </div>
+
+    <div class="watch-card card-5">
+      <span class="watch-type">LECTURE</span>
+      <h3>The Pleasure of Finding Things Out</h3>
+      <p>Richard Feynman</p>
+      <span class="watch-link">to watch</span>
+    </div>
+
+  </div>
+
+</section>
+  
 
   <footer>
     &copy; 2026 Angelina Ghimire · Hosted on GitHub Pages
