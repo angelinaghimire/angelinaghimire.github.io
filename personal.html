@@ -1,4 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Personal — Angelina Ghimire</title>
+
+<meta
+  name="description"
+  content="A few things Angelina Ghimire loves outside of technology."
+>
+
+<link rel="icon" href="data:,">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link
+  href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Public+Sans:wght@400;500;600&display=swap"
+  rel="stylesheet"
+>
+
 <style>
+:root {
+  --paper: #faf9f5;
+  --ink: #1c1f1d;
+  --ink-soft: #4b4f4a;
+  --accent: #2f5d50;
+  --line: #dedad0;
+  --muted: #8f8b7f;
+  --max-width: 900px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "Public Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 17px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrap {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 3.5rem 1.5rem 4rem;
+}
+
+/* Navigation */
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--line);
+}
+
+nav a {
+  color: var(--ink-soft);
+  text-decoration: none;
+  font-size: 0.95rem;
+  letter-spacing: 0.01em;
+  padding-bottom: 3px;
+  border-bottom: 1px solid transparent;
+  transition:
+    color 0.15s ease,
+    border-color 0.15s ease;
+}
+
+nav a:hover {
+  color: var(--ink);
+  border-color: var(--line);
+}
+
+nav a[aria-current="page"] {
+  color: var(--ink);
+  border-color: var(--accent);
+}
+
+/* Typography */
+
+h1,
+h2,
+h3 {
+  font-family: "Fraunces", Georgia, serif;
+}
+
+h1 {
+  margin: 0 0 0.5rem;
+  font-size: 2.5rem;
+  line-height: 1.15;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+
+.tagline {
+  margin: 0 0 2.25rem;
+  color: var(--accent);
+  font-family: "Fraunces", Georgia, serif;
+  font-size: 1.15rem;
+  font-style: italic;
+}
+
+p {
+  margin: 0 0 1.25rem;
+}
+
+a {
+  color: var(--accent);
+  text-decoration-color: rgba(47, 93, 80, 0.35);
+  text-underline-offset: 2px;
+}
+
+a:hover {
+  text-decoration-color: var(--accent);
+}
+
+/* Personal list */
+
+.personal-list {
+  margin: 0;
+  padding-left: 1.3rem;
+}
+
+.personal-list li {
+  padding-left: 0.25rem;
+  margin-bottom: 0.65rem;
+}
+
+.personal-list li:last-child {
+  margin-bottom: 0;
+}
+
 /* Book Shelf */
 
 .highlights {
@@ -15,7 +159,7 @@
   letter-spacing: -0.01em;
 }
 
-/* Bookshelf */
+/* Shelf */
 
 .bookshelf {
   position: relative;
@@ -33,26 +177,33 @@
   box-shadow: 0 5px 0 #c8b9a8;
 }
 
+/* Individual book spines */
+
 .book-spine {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
+
   width: 48px;
   height: 185px;
+
   padding: 0.8rem 0.35rem;
+
   border-radius: 3px 3px 1px 1px;
-  border-left: 1px solid rgba(0,0,0,0.08);
-  border-right: 1px solid rgba(0,0,0,0.08);
+  border-left: 1px solid rgba(0, 0, 0, 0.08);
+  border-right: 1px solid rgba(0, 0, 0, 0.08);
+
   box-shadow:
     2px 2px 4px rgba(28, 31, 29, 0.12),
-    inset 3px 0 0 rgba(255,255,255,0.15),
-    inset -3px 0 0 rgba(0,0,0,0.06);
+    inset 3px 0 0 rgba(255, 255, 255, 0.15),
+    inset -3px 0 0 rgba(0, 0, 0, 0.06);
 }
 
 .book-spine span {
   writing-mode: vertical-rl;
   transform: rotate(180deg);
+
   font-family: "Fraunces", Georgia, serif;
   font-size: 0.82rem;
   line-height: 1;
@@ -60,7 +211,7 @@
   text-align: center;
 }
 
-/* Individual books */
+/* Book colors and heights */
 
 .book-1 {
   height: 175px;
@@ -103,12 +254,17 @@
   background: #c2c8b4;
 }
 
+/* Book title list */
+
 .book-list {
   margin: 2rem 0 0;
   padding: 0;
+
   list-style: none;
+
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+
   column-gap: 3rem;
   row-gap: 0.7rem;
 }
@@ -117,7 +273,9 @@
   display: flex;
   align-items: baseline;
   gap: 0.7rem;
+
   padding-bottom: 0.65rem;
+
   border-bottom: 1px solid var(--line);
 }
 
@@ -130,12 +288,31 @@
 .book-title {
   font-family: "Fraunces", Georgia, serif;
   font-size: 1rem;
+  line-height: 1.4;
   color: var(--ink);
+}
+
+/* Footer */
+
+footer {
+  margin-top: 3rem;
+  color: var(--muted);
+  font-size: 0.85rem;
 }
 
 /* Responsive */
 
 @media (max-width: 700px) {
+
+  .book-list {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .book-list li {
+    padding: 0.7rem 0;
+  }
+
   .books {
     gap: 0.3rem;
     padding-left: 0;
@@ -149,18 +326,18 @@
   .book-spine span {
     font-size: 0.72rem;
   }
-
-  .book-list {
-    grid-template-columns: 1fr;
-    gap: 0;
-  }
-
-  .book-list li {
-    padding: 0.7rem 0;
-  }
 }
 
 @media (max-width: 480px) {
+
+  .wrap {
+    padding-top: 2.5rem;
+  }
+
+  h1 {
+    font-size: 2.1rem;
+  }
+
   .book-spine:nth-child(2),
   .book-spine:nth-child(5) {
     display: none;
@@ -171,82 +348,139 @@
   }
 }
 </style>
+</head>
 
-<section class="highlights" aria-labelledby="highlights-title">
+<body>
 
-  <h2 id="highlights-title">Book Shelf Recommendations</h2>
+<main class="wrap">
 
-  <div class="bookshelf">
+  <nav aria-label="Main navigation">
+    <a href="index.html">about</a>
+    <a href="projects.html">projects</a>
+    <a href="research.html">research &amp; writing</a>
+    <a href="personal.html" aria-current="page">personal</a>
+  </nav>
 
-    <div class="books">
+  <header>
 
-      <div class="book-spine book-1">
-        <span>Orbital</span>
+    <h1>Outside of Work...</h1>
+
+    <p class="tagline">
+      other things I enjoy
+    </p>
+
+    <ul class="personal-list">
+      <li>books that make me think, bookstores, and getting lost in libraries</li>
+      <li>cute coffee shops, matcha, fun drinks, and café hopping</li>
+      <li>baking desserts, but mostly eating them</li>
+      <li>long walks at sunset with absolutely nowhere to be</li>
+      <li>true crime documentaries and falling down deep-dive rabbit holes</li>
+      <li>yoga, spirituality, psychology, and intellectualizing the human experience</li>
+      <li>poetry, the stillness of waking up at 5am, and the smell of incense</li>
+    </ul>
+
+  </header>
+
+  <section class="highlights" aria-labelledby="highlights-title">
+
+    <h2 id="highlights-title">Book Shelf Recommendations</h2>
+
+    <div class="bookshelf">
+
+      <div class="books">
+
+        <div class="book-spine book-1">
+          <span>Orbital</span>
+        </div>
+
+        <div class="book-spine book-2">
+          <span>The Little Prince</span>
+        </div>
+
+        <div class="book-spine book-3">
+          <span>The Unbearable Lightness of Being</span>
+        </div>
+
+        <div class="book-spine book-4">
+          <span>The God of Small Things</span>
+        </div>
+
+        <div class="book-spine book-5">
+          <span>Gödel, Escher, Bach</span>
+        </div>
+
+        <div class="book-spine book-6">
+          <span>The Singularity Is Near</span>
+        </div>
+
+        <div class="book-spine book-7">
+          <span>How to Create a Mind</span>
+        </div>
+
       </div>
 
-      <div class="book-spine book-2">
-        <span>The Little Prince</span>
-      </div>
+      <ol class="book-list">
 
-      <div class="book-spine book-3">
-        <span>The Unbearable Lightness of Being</span>
-      </div>
+        <li>
+          <span class="book-number">01</span>
+          <span class="book-title">
+            Orbital — Samantha Harvey
+          </span>
+        </li>
 
-      <div class="book-spine book-4">
-        <span>The God of Small Things</span>
-      </div>
+        <li>
+          <span class="book-number">02</span>
+          <span class="book-title">
+            The Little Prince — Antoine de Saint-Exupéry
+          </span>
+        </li>
 
-      <div class="book-spine book-5">
-        <span>Gödel, Escher, Bach</span>
-      </div>
+        <li>
+          <span class="book-number">03</span>
+          <span class="book-title">
+            The Unbearable Lightness of Being — Milan Kundera
+          </span>
+        </li>
 
-      <div class="book-spine book-6">
-        <span>The Singularity Is Near</span>
-      </div>
+        <li>
+          <span class="book-number">04</span>
+          <span class="book-title">
+            The God of Small Things — Arundhati Roy
+          </span>
+        </li>
 
-      <div class="book-spine book-7">
-        <span>How to Create a Mind</span>
-      </div>
+        <li>
+          <span class="book-number">05</span>
+          <span class="book-title">
+            Gödel, Escher, Bach — Douglas Hofstadter
+          </span>
+        </li>
+
+        <li>
+          <span class="book-number">06</span>
+          <span class="book-title">
+            The Singularity Is Near — Ray Kurzweil
+          </span>
+        </li>
+
+        <li>
+          <span class="book-number">07</span>
+          <span class="book-title">
+            How to Create a Mind — Ray Kurzweil
+          </span>
+        </li>
+
+      </ol>
 
     </div>
 
-    <ol class="book-list">
-      <li>
-        <span class="book-number">01</span>
-        <span class="book-title">Orbital — Samantha Harvey</span>
-      </li>
+  </section>
 
-      <li>
-        <span class="book-number">02</span>
-        <span class="book-title">The Little Prince — Antoine de Saint-Exupéry</span>
-      </li>
+  <footer>
+    &copy; 2026 Angelina Ghimire · Hosted on GitHub Pages
+  </footer>
 
-      <li>
-        <span class="book-number">03</span>
-        <span class="book-title">The Unbearable Lightness of Being — Milan Kundera</span>
-      </li>
+</main>
 
-      <li>
-        <span class="book-number">04</span>
-        <span class="book-title">The God of Small Things — Arundhati Roy</span>
-      </li>
-
-      <li>
-        <span class="book-number">05</span>
-        <span class="book-title">Gödel, Escher, Bach — Douglas Hofstadter</span>
-      </li>
-
-      <li>
-        <span class="book-number">06</span>
-        <span class="book-title">The Singularity Is Near — Ray Kurzweil</span>
-      </li>
-
-      <li>
-        <span class="book-number">07</span>
-        <span class="book-title">How to Create a Mind — Ray Kurzweil</span>
-      </li>
-    </ol>
-
-  </div>
-
-</section>
+</body>
+</html>
